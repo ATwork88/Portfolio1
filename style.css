@@ -37,7 +37,6 @@
   	max-width: 300px;
   	height: auto;
   	max-height: 300px;
-  	margin-left: 15px;
 }
 
 #thirdImg {
@@ -47,23 +46,36 @@
   	max-height: 300px;
 }
 
-#row2 {
-	margin-top: 100px;
-	height: 500px;
-	background-image: url(https://d3q49wayiwmron.cloudfront.net/wp-content/uploads/programming.jpg);
-	background-size: 90%;
-	background-position: center;
-	opacity: 0.2;
+#row1 {
+	width: 1050px;
+	margin-left: 15px;
 }
 
-#row3 {
-	margin-top: 50px;
-	height: 100px;
+#row2 {
+	padding-top: 15px;
+	padding-left: 45px;
 }
 
 #firstCol {
-	margin-left: 0px;
-	left: 30px;
+	width: 350px;
+}
+
+#secondCol {
+	width: 350px;
+}
+
+#thirdCol {
+	width: 350px;
+}
+
+#row3 {
+	margin-top: 100px;
+	height: 500px;
+	background-image: url(https://d3q49wayiwmron.cloudfront.net/wp-content/uploads/programming.jpg);
+	background-position: center;
+	opacity: 0.2;
+	width: 1000px;
+	margin-left: 30px;
 }
 
 hr {
