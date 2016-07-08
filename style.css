@@ -5,9 +5,10 @@
 }
 
 .container {
-	width: 1100px;
+	max-width: 1100px;
 	margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 .col-md-4 {
@@ -21,7 +22,7 @@
 /* Type animation */
 
 .type-animation {
-  width: 1000px;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
   position: center;
@@ -92,41 +93,65 @@
 #ig-b-v-24 { width: 137px; height: 24px; background: url(http://instagramstatic-a.akamaihd.net/h1/thirdparty/images/badges/ig-badge-view-24.png/d93e757e1104.png) no-repeat 0 0; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 #ig-b-v-24 { background-image: url(http://instagramstatic-a.akamaihd.net/h1/thirdparty/images/badges/ig-badge-view-24.png/d93e757e1104.png); background-size: 160px 178px; } }
-/* ----------------------_____------- */
+/* ----------------------------- */
 
 /* Instagram photos */
-#firstImg {
-	width: 300px;
+/*#firstImg {
+	max-width: 300px;
   	margin-right: auto;
 	margin-left: auto;
-	display: block;
+	width: auto;
+	height: auto;
 }
 
 #secondImg {
-	width: 300px;
+	max-width: 300px;
   	margin-right: auto;
 	margin-left: auto;
-	display: block;
+	width: auto;
+	height: auto;
 }
 
 #thirdImg {
-	width: 300px;
+	max-width: 300px;
   	margin-right: auto;
 	margin-left: auto;
-	display: block;
+	width: auto;
+	height: auto;
+}*/
+
+.ig-photo {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 100%;
+    height: auto;
+    width: 100%;
+    padding: 15px;
+}
+
+/*.igphotos {
+	position:relative;
+display: inline-block;
+float:left;
+padding:10px;
 }
 
 #ig-photos {
-	/*min-width: 1050px;
+	min-width: 1050px;
     margin-right: auto;
-	margin-left: auto;*/
-	width: 1000px;
+	margin-left: auto;
+	max-width: 90%;
 	position: absolute;
 	left: 23%;
 	right: 23%;
 	margin-left: -150px;
 	margin-right: -150px;
-}
+	    overflow: hidden;
+}*/
+
+/*.instagram-photos {position:relative; width:100% max-width:600px; margin:auto; padding: 20px; text-align:center;}
+
+.photos {position:relative; display:inline-block; width:30% max-width:180px; margin:auto; padding: 0px 10px 0px 10px;}*/
 
 #ig-logo {
 	padding-top: 310px;
