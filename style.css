@@ -6,6 +6,8 @@
 
 .container {
 	width: 1100px;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 .col-md-4 {
@@ -16,6 +18,73 @@
 	margin-top: 30px;
 }
 
+/* Type animation */
+
+.type-animation {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  position: center;
+  padding-bottom: 20px;
+} 
+
+.type-animation p{
+  color: black; 
+  font-family: "Courier";
+  font-size: 16px;
+  margin: 6px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 40em;
+  animation: type 4s steps(60, end); 
+}
+
+.type-animation p:nth-child(2){
+  animation: type2 5s steps(60, end);
+}
+
+.type-animation p:nth-child(3){
+  animation: type3 8s steps(60, end);
+}
+
+.type-animation p:nth-child(4){
+  animation: type3 12s steps(60, end);
+}
+
+.type-animation p a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.type-animation span{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes type3{
+  0%{width: 0;}
+  70%{width: 0;}
+  100%{width: 100;}
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+/* --------------- */
+
+
+/* --------- Instagram logo --------- */
 #ig-b- { display: inline-block; }
 #ig-b- img { visibility: hidden; }
 #ig-b-:hover { background-position: 0 -60px; } 
@@ -23,50 +92,58 @@
 #ig-b-v-24 { width: 137px; height: 24px; background: url(http://instagramstatic-a.akamaihd.net/h1/thirdparty/images/badges/ig-badge-view-24.png/d93e757e1104.png) no-repeat 0 0; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 #ig-b-v-24 { background-image: url(http://instagramstatic-a.akamaihd.net/h1/thirdparty/images/badges/ig-badge-view-24.png/d93e757e1104.png); background-size: 160px 178px; } }
+/* ----------------------_____------- */
 
+/* Instagram photos */
 #firstImg {
-	width: auto;
-  	max-width: 300px;
-  	height: auto;
-  	max-height: 300px;
-  	margin-left: auto;
+	width: 300px;
+  	margin-right: auto;
+	margin-left: auto;
+	display: block;
 }
 
 #secondImg {
-	width: auto;
-  	max-width: 300px;
-  	height: auto;
-  	max-height: 300px;
+	width: 300px;
+  	margin-right: auto;
+	margin-left: auto;
+	display: block;
 }
 
 #thirdImg {
-	width: auto;
-  	max-width: 300px;
-  	height: auto;
-  	max-height: 300px;
+	width: 300px;
+  	margin-right: auto;
+	margin-left: auto;
+	display: block;
 }
 
-#row1 {
-	width: 1050px;
-	margin-left: 15px;
+#ig-photos {
+	/*min-width: 1050px;
+    margin-right: auto;
+	margin-left: auto;*/
+	width: 1000px;
+	position: absolute;
+	left: 23%;
+	right: 23%;
+	margin-left: -150px;
+	margin-right: -150px;
 }
 
-#logo {
-	padding-top: 15px;
-	padding-left: 45px;
+#ig-logo {
+	padding-top: 310px;
+	padding-left: 69px;
 }
 
-#firstCol {
+/*#firstCol {
 	width: 350px;
 }
 
 #secondCol {
-	width: 350px;
+	width: 340px;
 }
 
 #thirdCol {
 	width: 350px;
-}
+}*/
 
 #row3 {
 	margin-top: 100px;
