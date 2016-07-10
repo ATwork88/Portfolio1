@@ -4,23 +4,23 @@
 	line-height: 90px;
 }
 
-.container {
+.container{
 	max-width: 1100px;
+	width: 100%;
 	margin-left: auto;
     margin-right: auto;
     overflow: hidden;
 }
 
-.col-md-4 {
+/*.col-md-4 {
 	width: auto;
-}
+}*/
 
 #header {
 	margin-top: 30px;
 }
 
-/* Type animation */
-
+/* --------------- Type animation --------------- */
 .type-animation {
   width: 75%;
   margin-left: auto;
@@ -81,94 +81,43 @@
 @keyframes blink{
   to{opacity: .0;}
 }
+/* -------------------------------------------- */
 
-/* --------------- */
 
-
-/* --------- Instagram logo --------- */
+/* -------------- Instagram logo -------------- */
 #ig-b- { display: inline-block; }
 #ig-b- img { visibility: hidden; }
 #ig-b-:hover { background-position: 0 -60px; } 
 #ig-b-:active { background-position: 0 -120px; }
-#ig-b-v-24 { width: 137px; height: 24px; background: url(http://instagramstatic-a.akamaihd.net/h1/thirdparty/images/badges/ig-badge-view-24.png/d93e757e1104.png) no-repeat 0 0; }
+#ig-b-v-24 { width: 137px; height: 24px; background: url(http://instagramstatic-a.akamaihd.net/h1/thirdparty/images/badges/ig-badge-view-24.png/d93e757e1104.png) no-repeat 0 0;}
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 #ig-b-v-24 { background-image: url(http://instagramstatic-a.akamaihd.net/h1/thirdparty/images/badges/ig-badge-view-24.png/d93e757e1104.png); background-size: 160px 178px; } }
-/* ----------------------------- */
-
-/* Instagram photos */
-/*#firstImg {
-	max-width: 300px;
-  	margin-right: auto;
-	margin-left: auto;
-	width: auto;
-	height: auto;
-}
-
-#secondImg {
-	max-width: 300px;
-  	margin-right: auto;
-	margin-left: auto;
-	width: auto;
-	height: auto;
-}
-
-#thirdImg {
-	max-width: 300px;
-  	margin-right: auto;
-	margin-left: auto;
-	width: auto;
-	height: auto;
-}*/
+.ig-b-v-24 { padding-left: 15px; }
+/* -------------------------------------------- */
 
 .ig-photo {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 100%;
     height: auto;
-    width: 100%;
     padding: 15px;
 }
 
-/*.igphotos {
-	position:relative;
-display: inline-block;
-float:left;
-padding:10px;
-}
-
-#ig-photos {
-	min-width: 1050px;
-    margin-right: auto;
+.instagram-photos {
+	width: 75%;
 	margin-left: auto;
-	max-width: 90%;
-	position: absolute;
-	left: 23%;
-	right: 23%;
-	margin-left: -150px;
-	margin-right: -150px;
-	    overflow: hidden;
-}*/
-
-/*.instagram-photos {position:relative; width:100% max-width:600px; margin:auto; padding: 20px; text-align:center;}
-
-.photos {position:relative; display:inline-block; width:30% max-width:180px; margin:auto; padding: 0px 10px 0px 10px;}*/
-
-#ig-logo {
-	padding-top: 310px;
-	padding-left: 69px;
+	margin-right: auto;
+	position: center;
 }
 
-/*#firstCol {
-	width: 350px;
+.instagram-table {
+	max-width: 950px;
+	width: 90%;
+	height: auto;
+	margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
 }
-
-#secondCol {
-	width: 340px;
-}
-
-#thirdCol {
-	width: 350px;
-}*/
 
 #row3 {
 	margin-top: 100px;
@@ -178,6 +127,36 @@ padding:10px;
 	opacity: 0.2;
 	width: 1000px;
 	margin-left: 30px;
+}
+
+.glyphicon-thumbs-up {
+	margin: 2px;
+	color: #3b5998;
+}
+
+.form-horizontal {
+	width: 75%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.progress {background: rgba(255, 255, 255, 1); border: 0px solid rgba(255, 255, 255, 1); border-radius: 5px; height: 20px;}
+.progress-bar-brown {background: rgba(186, 181, 177, 1);} 
+.progress-striped .progress-bar-brown {background-color: rgba(186, 181, 177, 1); background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255, 255, 255, 0.15),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255, 255, 255, 0.15)),color-stop(0.75,rgba(255, 255, 255, 0.15)),color-stop(0.75,transparent),to(transparent))); background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-image: linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-size: 40px 40px;}
+
+.progress {background: rgba(255, 255, 255, 1); border: 0px solid rgba(255, 255, 255, 1); border-radius: 5px; height: 20px;}
+.progress-bar-blue {background: rgba(174, 203, 227, 1);} 
+.progress-striped .progress-bar-blue {background-color: rgba(174, 203, 227, 1); background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255, 255, 255, 0.15),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255, 255, 255, 0.15)),color-stop(0.75,rgba(255, 255, 255, 0.15)),color-stop(0.75,transparent),to(transparent))); background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-image: linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-size: 40px 40px;}
+
+.progress {background: rgba(255, 255, 255, 1); border: 0px solid rgba(255, 255, 255, 1); border-radius: 5px; height: 20px;}
+.progress-bar-black {background: rgba(0, 0, 0, 1);} 
+.progress-striped .progress-bar-black {background-color: rgba(0, 0, 0, 1); background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255, 255, 255, 0.15),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255, 255, 255, 0.15)),color-stop(0.75,rgba(255, 255, 255, 0.15)),color-stop(0.75,transparent),to(transparent))); background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-image: linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-size: 40px 40px;}
+
+.progress-bars {
+	padding-top: 40px;
+	width: 75%;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 hr {
