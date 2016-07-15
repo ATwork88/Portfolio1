@@ -1,88 +1,60 @@
-#text-center {
-	text-align: center;
-	vertical-align: middle;
-	line-height: 90px;
-}
-
-.container{
-	max-width: 1100px;
+.container {
 	width: 100%;
 	margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    text-align: center;
 }
 
-/*.col-md-4 {
-	width: auto;
-}*/
-
-#header {
-	margin-top: 30px;
+.wrapper {
+	margin-top: 190px;
 }
 
-/* --------------- Type animation --------------- */
-.type-animation {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  position: center;
-  padding-bottom: 20px;
-} 
-
-.type-animation p{
-  color: black; 
-  font-family: "Courier";
-  font-size: 16px;
-  margin: 6px 0 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 40em;
-  animation: type 4s steps(60, end); 
+.wrapper h1 {
+    font-size: 5.5em;
+    color: #fff;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-bottom: 5px;
 }
 
-.type-animation p:nth-child(2){
-  animation: type2 5s steps(60, end);
+.wrapper span {
+	color: white;
+	text-align: center;
+	font-family: "Consolas";
+	font-size: 15px;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: type 6s; 
+	padding-top: 8px;
 }
 
-.type-animation p:nth-child(3){
-  animation: type3 8s steps(60, end);
+body {
+	background-image: url('background-img1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.type-animation p:nth-child(4){
-  animation: type3 12s steps(60, end);
-}
-
-.type-animation p a{
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.type-animation span{
-  animation: blink 1s infinite;
-}
+/* ---------type animation-------- */
 
 @keyframes type{ 
-  from { width: 0; } 
-} 
-
-@keyframes type2{
-  0%{width: 0;}
-  50%{width: 0;}
-  100%{ width: 100; } 
-} 
-
-@keyframes type3{
-  0%{width: 0;}
-  70%{width: 0;}
-  100%{width: 100;}
-} 
-
-@keyframes blink{
-  to{opacity: .0;}
+	0% {width: 0px;margin:0 auto;}
+  100% {width: 100%; margin:0 auto;}
 }
-/* -------------------------------------------- */
 
+.typing {
+	display: inline-block;
+	text-align: center;
+}
+
+/* ---------social media----------- */
+.fa {
+	color: white;
+}
+
+.social-medias i{
+	padding: 14px 10px;
+}
 
 /* -------------- Instagram logo -------------- */
 #ig-b- { display: inline-block; }
@@ -92,16 +64,8 @@
 #ig-b-v-24 { width: 137px; height: 24px; background: url(http://instagramstatic-a.akamaihd.net/h1/thirdparty/images/badges/ig-badge-view-24.png/d93e757e1104.png) no-repeat 0 0;}
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 #ig-b-v-24 { background-image: url(http://instagramstatic-a.akamaihd.net/h1/thirdparty/images/badges/ig-badge-view-24.png/d93e757e1104.png); background-size: 160px 178px; } }
-/* -------------------------------------------- */
 
-.ig-photo {
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 100%;
-    height: auto;
-    padding-bottom: 5px;
-}
-
+/* ------------- Instagram photos ------------ */
 .instagram-photos {
 	width: 75%;
 	margin-left: auto;
@@ -109,163 +73,10 @@
 	position: center;
 }
 
-.instagram-table {
-	max-width: 950px;
-	width: 90%;
-	height: auto;
+.ig-photo {
+	margin-right: auto;
 	margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-}
-
-#row3 {
-	margin-top: 100px;
-	height: 500px;
-	background-image: url(https://d3q49wayiwmron.cloudfront.net/wp-content/uploads/programming.jpg);
-	background-position: center;
-	opacity: 0.2;
-	width: 1000px;
-	margin-left: 30px;
-}
-
-.glyphicon-thumbs-up {
-	margin: 2px;
-	color: #3b5998;
-}
-
-.form-horizontal {
-	width: 75%;
-	margin-left: auto;
-    margin-right: auto;
-}
-
-.progress {background: rgba(255, 255, 255, 1); border: 0px solid rgba(255, 255, 255, 1); border-radius: 5px; height: 20px;}
-.progress-bar-brown {background: rgba(186, 181, 177, 1);} 
-.progress-striped .progress-bar-brown {background-color: rgba(186, 181, 177, 1); background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255, 255, 255, 0.15),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255, 255, 255, 0.15)),color-stop(0.75,rgba(255, 255, 255, 0.15)),color-stop(0.75,transparent),to(transparent))); background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-image: linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-size: 40px 40px;}
-
-.progress {background: rgba(255, 255, 255, 1); border: 0px solid rgba(255, 255, 255, 1); border-radius: 5px; height: 20px;}
-.progress-bar-blue {background: rgba(174, 203, 227, 1);} 
-.progress-striped .progress-bar-blue {background-color: rgba(174, 203, 227, 1); background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255, 255, 255, 0.15),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255, 255, 255, 0.15)),color-stop(0.75,rgba(255, 255, 255, 0.15)),color-stop(0.75,transparent),to(transparent))); background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-image: linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-size: 40px 40px;}
-
-.progress {background: rgba(255, 255, 255, 1); border: 0px solid rgba(255, 255, 255, 1); border-radius: 5px; height: 20px;}
-.progress-bar-black {background: rgba(0, 0, 0, 1);} 
-.progress-striped .progress-bar-black {background-color: rgba(0, 0, 0, 1); background-image: -webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255, 255, 255, 0.15),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255, 255, 255, 0.15)),color-stop(0.75,rgba(255, 255, 255, 0.15)),color-stop(0.75,transparent),to(transparent))); background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-image: linear-gradient(45deg,rgba(255, 255, 255, 0.15) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, 0.15) 50%,rgba(255, 255, 255, 0.15) 75%,transparent 75%,transparent); background-size: 40px 40px;}
-
-.progress-bars {
-	padding-top: 40px;
-	width: 75%;
-	margin-left: auto;
-    margin-right: auto;
-}
-
-.resume:before {
-/*  	content: "";
-  
-  display: block;
-  background-image: url('resume.png');
-  height: 400px;
-	margin-left: auto;
-    margin-right: auto;
-  
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);*/
-  content: "";
-    position: absolute;
-    width : 75%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background: url('resume.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-
-    filter        : blur(5px);
-    -moz-filter   : blur(5px);
-    -webkit-filter: blur(5px);
-    -o-filter     : blur(5px);
-
-    transition        : all 2s linear;
-    -moz-transition   : all 2s linear;
-    -webkit-transition: all 2s linear;
-    -o-transition     : all 2s linear;
-}
-
-.resume {
-	width: 75%;
-	margin-left: auto;
-    margin-right: auto;
-}
-
-.resume-content {
-	padding-top: 310px;
-}
-
-/* ------------------------------ */
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-  overflow: auto;
-}
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 70%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06D85F;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 70%;
-  }
-}
-/* --------------- */
-
-hr {
-	margin-bottom: 40px;
+	max-width: 100%;
+    height: auto;
+    padding-bottom: 5px;
 }
