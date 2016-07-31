@@ -1,6 +1,3 @@
-* {
-    box-sizing: border-box;
-}
 .container {
 	width: 100%;
 	margin-left: auto;
@@ -18,17 +15,16 @@
     color: #fff;
     font-weight: 100;
     text-transform: uppercase;
-    font-family: Helvetica;
+    font-family: "Lucida Console";
 }
 
 .wrapper span {
 	color: white;
 	text-align: center;
-	font-family: "Consolas";
+	font-family: "Lucida Console";
 	font-size: 15px;
 	white-space: nowrap;
 	overflow: hidden;
-/*	animation: type 6s; */
 }
 
 body {
@@ -66,7 +62,7 @@ footer {
 /* For desktop: */
 @media only screen and (max-width: 768px) {
 	.wrapper {
-		margin-top: 190px;
+		margin-top: 150px;
 	}
     .wrapper h1 {
     	font-size: 5.5em;
