@@ -1,9 +1,22 @@
 body {
 	background: url('background-img1.jpg') no-repeat 50% 50% fixed; 
   	background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
+}
+
+h1 {
+    font-size: 5.5em;
+    color: #fff;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-family: Helvetica;
+}
+
+.wrapper {
+	display: table;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
 }
 
 .container {
@@ -16,7 +29,7 @@ body {
     vertical-align: middle;
 }
 
-.container span {
+.container p {
 	color: white;
 	text-align: center;
 	font-family: "Helvetica";
@@ -25,33 +38,25 @@ body {
 	overflow: hidden;
 }
 
-
-.wrapper {
-	display: table;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-	position: relative;
-}
-
-h1 {
-    font-size: 5.5em;
-    color: #fff;
-    font-weight: 100;
-    text-transform: uppercase;
-    font-family: Helvetica;
-}
-
 /* type animation */
-@keyframes type{ 
-	0% {width: 0px;margin:0 auto;}
-  100% {width: 100%; margin:0 auto;}
-}
-
 .typing {
 	display: inline-block;
-	text-align: center;
+	overflow: hidden;
+	width: 14em;
+	animation: type 3s steps(25, end);
 }
+
+.blinking {
+	animation: blink 1s infinite;
+}
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
 
 /* social medias */
 .fa {
