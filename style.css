@@ -7,6 +7,12 @@ html, body {
 	font-weight: lighter;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html, body, div, span,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -40,8 +46,30 @@ p {
 	color: #f42670;
 }
 
+#name2 {
+	display: none;
+}
+
+#name2 h1 {
+    color: white;
+    font-weight: 100;
+    padding-bottom: 30px;
+}
+
+#name2 span {
+	color: #f42670;
+}
+
 #selector {
 	color: #b8ff3b;
+}
+
+#intro {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  padding: 0 20px;
+  width: 100%;
 }
 
 #brackets {
@@ -61,6 +89,21 @@ p {
 	width: 50%;
 	z-index:10;
     position:relative;
+}
+
+.rwd-break {
+	display: block;
+	display: none;
+}
+
+.tab {
+	display: block;
+	display: none;
+}
+
+.value {
+	padding-left: 25px;
+	margin:0;
 }
 
 footer {
@@ -86,11 +129,30 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 320px) {
-    .wrapper h1 {
-    	font-size: 5.4em;
+@media only screen and (max-width: 420px) {
+    .container {
+    	padding:0;
+    	width: 90%;
+    }
+    .rwd-break {
+		display: block;
 	}
-	.wrapper span {
-		font-size: 15px;
+	#name {
+		display: none;
+	}
+	#name2 {
+		display: block;
+	}
+	p {
+		font-size: 17px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	h1 {
+		font-size: 32px;
+	}
+	p {
+		font-size: 14px;
 	}
 }
