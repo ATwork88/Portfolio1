@@ -132,8 +132,8 @@ footer {
 @media only screen and (max-width: 420px) {
     .container {
     	padding: 0;
-    	padding-bottom: 20px;
-    	padding-top: 20px;
+    	margin-bottom: 20px;
+    	margin-top: 20px;
     	width: 90%;
     }
     .rwd-break {
