@@ -5,6 +5,7 @@ html, body {
 	background-color: #292929;
 	font-family: Consolas,monaco,monospace;
 	font-weight: lighter;
+	max-width: none;
 }
 
 * {
@@ -130,6 +131,9 @@ footer {
 }
 
 @media only screen and (max-width: 420px) {
+	body {
+		overflow: scroll;
+	}
     .container {
     	padding: 0;
     	margin-bottom: 20px;
