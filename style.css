@@ -27,10 +27,10 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, section, summary,
 time, mark, audio, video {
-  margin: 0;
+/*  margin: 0;
   padding: 0;
   border: 0;
-  vertical-align: baseline;
+  vertical-align: baseline;*/
 }
 
 p {
@@ -136,9 +136,10 @@ footer {
 	}
     .container {
     	padding: 0;
-    	margin-bottom: 20px;
-    	margin-top: 20px;
+    	margin-bottom: 50px;
+    	margin-top: 50px;
     	width: 90%;
+    	overflow: scroll;
     }
     .rwd-break {
 		display: block;
