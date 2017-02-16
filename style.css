@@ -77,9 +77,13 @@ p {
 	width: 500px;
 }
 
-.value {
+.value, .comment {
 	padding-left: 25px;
 	margin:0;
+}
+
+.comment p {
+	color: #6b6b6b;
 }
 
 footer {
