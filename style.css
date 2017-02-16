@@ -65,41 +65,16 @@ p {
 	color: #b8ff3b;
 }
 
-#intro {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  padding: 0 20px;
-  width: 100%;
-}
-
 #brackets {
 	color: white;
 }
 
-#particles {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index:100;
-    position:relative;
-}
-
 .container {
-	padding: 40px;
-	width: 50%;
-	z-index:10;
-    position:relative;
-}
-
-.rwd-break {
-	display: block;
-	display: none;
-}
-
-.tab {
-	display: block;
-	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
 }
 
 .value {
