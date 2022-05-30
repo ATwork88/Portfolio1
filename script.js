@@ -4,41 +4,53 @@ var header =
 jQuery(function($) {
   $('html').terminal(function(cmd, term) {
     if (cmd == 'help') {
-      term.echo("available commands are [[u;#00ee11;]about], [[u;#00ee11;]experience], [[u;#00ee11;]skills], [[u;#00ee11;]hobbies], [[u;#00ee11;]funfacts], [[u;#00ee11;]contact]");
+      term.echo("Available commands are:");
+      term.echo("\u2003\u2003[[;#d74f62;]+ about]");
+      term.echo("\u2003\u2003[[;#d74f62;]+ experience]");
+      term.echo("\u2003\u2003[[;#d74f62;]+ skills]");
+      term.echo("\u2003\u2003[[;#d74f62;]+ hobbies]");
+      term.echo("\u2003\u2003[[;#d74f62;]+ funfacts]");
+      term.echo("\u2003\u2003[[;#d74f62;]+ contact]");
     } 
     else if (cmd == 'about') {
-      term.echo("[[ub;white;teal] First Name ]\tLung (Teresa)" +
-        "\n[[ub;white;teal] Last Name ]\tLin" +
-        "\n[[ub;white;teal] Location ]\tOrange County, California" +
-        "\n[[ub;white;teal] Degree ]\tBachelor's in Computer science; minor in Math and Cyber Security" + 
-        "\n-----------------------------------------------------------------------------" + 
-        "\nA Full Stack Engineer who enjoys playing video games and lifting heavy things" + 
-        "\n-----------------------------------------------------------------------------");
+      term.echo("[[;#00ee11;]First Name] Lung (Teresa)");
+      term.echo("[[;#00ee11;]Last Name] Lin");
+      term.echo("[[;#00ee11;]Location] Orange County, California");
+      term.echo("[[;#00ee11;]Degree] Bachelor's in Computer science; minor in Math and Cyber Security");
+      term.echo("-----------------------------------------------------------------------------");
+      term.echo("A Full Stack Engineer who enjoys playing video games and lifting heavy things");
+      term.echo("-----------------------------------------------------------------------------");
     }
     else if (cmd == 'experience') {
-      term.echo("[[ub;white;teal] Jul 2021 - Present ]\tFull Stack Software Engineer @ Curavit" + 
-        "\n[[ub;white;teal] Apr 2020 - Jul 2021 ]\tFull Stack Engineer @ KPMG" + 
-        "\n[[ub;white;teal] Jan 2018 - Apr 2020 ]\tAssociate Advisory @ KPMG" + 
-        "\n[[ub;white;teal] Jul 2017 - Dec 2017]\tAssociate Consultant @ Collabralink");
+      term.echo("[[;#00ee11;]Jul 2021 - Present] Full Stack Software Engineer @ Curavit");
+      term.echo("[[;#00ee11;]Apr 2020 - Jul 2021] Full Stack Engineer @ KPMG");
+      term.echo("[[;#00ee11;]Jan 2018 - Apr 2020] Associate Advisory @ KPMG");
+      term.echo("[[;#00ee11;]Jul 2017 - Dec 2017] Associate Consultant @ Collabralink");
     }
     else if (cmd == 'skills') {
-      term.echo("[[ub;white;teal] Programming ]\tJava, C#, TypeScript, Python, JavaScript" + 
-        "\n[[ub;white;teal] Others ]\tProblem Solving, Logical Thinking, Debugging, Googling");
+      term.echo("[[;#00ee11;]Programming] Java, C#, C, Python, SQL, TypeScript, JavaScript, ReactJS, Angular, Node.js");
+      term.echo("[[;#00ee11;]Others] Debugging and running efficient meetings");
     }
     else if (cmd == 'hobbies') {
-      term.echo("[[u;#00ee11;]=>] Lifting\n[[u;#00ee11;]=>] Playing video games\n[[u;#00ee11;]=>] Snowboarding");
+      term.echo("[[;#00ee11;]==>] Lifting");
+      term.echo("[[;#00ee11;]==>] Streaming");
+      term.echo("[[;#00ee11;]==>] Martial arts");
+      term.echo("[[;#00ee11;]==>] Playing video games");
     }
     else if (cmd == 'funfacts') {
-      term.echo("[[u;#00ee11;]=>] I was born and raised in Taiwan" + 
-        "\n[[u;#00ee11;]=>] I love Irish and Ethiopian food" + 
-        "\n[[u;#00ee11;]=>] I almost got deported from Iceland");
+      term.echo("[[;#00ee11;]==>] I was born and raised in Taiwan");
+      term.echo("[[;#00ee11;]==>] I love Irish and Ethiopian food");
+      term.echo("[[;#00ee11;]==>] I almost got deported from Iceland");
     }
     else if (cmd == 'contact') {
-      term.echo("[[ub;white;teal] Phone ]\t(540) 449-8594" + 
-        "\n[[ub;white;teal] Email ]\tlinlung0321@gmail.com");
+      term.echo("[[;#00ee11;]Phone] (540) 449-8594");
+      term.echo("[[;#00ee11;]Email] linlung0321@gmail.com") ;
+    }
+    else if (cmd.trim() == '') {
+      
     }
     else {
-      term.echo("unknown command " + cmd);
+      term.echo("Oops! Unknown command " + cmd);
     }
   }, {
     greetings: header + "\nWelcome! Start typing a command to get to know me."+
@@ -47,4 +59,8 @@ jQuery(function($) {
 
 function teal(message) {
     return "[[b;teal;black]" + message + "]";
+}
+
+function green(message) {
+  return "[[;#00ee11;]" + message + "]";
 }
