@@ -60,7 +60,7 @@ jQuery(function($) {
         if ($(window).width() < 390) {
           term.echo(NARROW_HEADER);
         }
-        else if ($(window).width() < 400) {
+        else if ($(window).width() < 800) {
           term.echo(MEDIUM_HEADER);
         }
         else {
