@@ -1,17 +1,16 @@
-// components/SecondaryDrawer.js
 import { useState } from "react";
-import { FiFile, FiImage, FiChevronDown, FiChevronRight } from "react-icons/fi"; // Import arrow icons
+import { FiAlignLeft, FiChevronDown, FiChevronRight } from "react-icons/fi";
 
-export default function SecondaryDrawer({ isOpen, onClose }) {
-  const [isProjectOpen, setIsProjectOpen] = useState(true); // State to handle collapse/expand
+export default function SecondaryDrawer({ isOpen, handleSecondarySelection }) {
+  const [isProjectOpen, setIsProjectOpen] = useState(true);
 
   const toggleProject = () => {
-    setIsProjectOpen(!isProjectOpen); // Toggle the state
+    setIsProjectOpen(!isProjectOpen);
   };
 
   return (
     <div
-      className={`fixed top-10 left-16 h-[calc(100%-2.5rem)] w-64 bg-[#181818] text-white shadow-md border-r border-[#2b2b2b] transition-transform duration-300 ease-in-out ${
+      className={`fixed top-10 left-16 h-[calc(100%-2.5rem)] w-64 bg-[#181818] text-white shadow-md border-r border-gray-600 transition-transform duration-300 ease-in-out ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -34,17 +33,19 @@ export default function SecondaryDrawer({ isOpen, onClose }) {
           {/* Collapsible File List */}
           {isProjectOpen && (
             <ul className="pl-6 space-y-2">
-              <li className="flex items-center space-x-2">
-                <FiFile className="text-yellow-500" />
-                <span>favicon.ico</span>
+              <li
+                className="flex items-center space-x-2 cursor-pointer"
+                onClick={() => handleSecondarySelection("instafired")}
+              >
+                <FiAlignLeft />
+                <span>instafired</span>
               </li>
-              <li className="flex items-center space-x-2">
-                <FiImage className="text-purple-500" />
-                <span>logo.png</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <FiImage className="text-purple-500" />
-                <span>owl.png</span>
+              <li
+                className="flex items-center space-x-2 cursor-pointer"
+                onClick={() => handleSecondarySelection("A Plus")}
+              >
+                <FiAlignLeft />
+                <span>A Plus</span>
               </li>
             </ul>
           )}

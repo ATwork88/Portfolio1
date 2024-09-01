@@ -1,9 +1,12 @@
-// components/Drawer.js
 import { FiHome, FiUser, FiFolder, FiMail } from "react-icons/fi";
 
-export default function Drawer({ handleOpenSecondary, handleCloseSecondary }) {
-  // Function to handle icon clicks
+export default function Drawer({
+  handleOpenSecondary,
+  handleCloseSecondary,
+  handlePrimarySelection,
+}) {
   const handleIconClick = (iconIndex) => {
+    handlePrimarySelection(iconIndex);
     if (iconIndex === 3) {
       // Open secondary drawer only if the third icon is clicked
       handleOpenSecondary();
@@ -17,12 +20,8 @@ export default function Drawer({ handleOpenSecondary, handleCloseSecondary }) {
     <div className="flex">
       {/* Main Drawer */}
       <div
-        className={`fixed top-10 left-0 h-full w-16 bg-[#181818] text-white flex flex-col items-center py-4 shadow-lg z-40 border-r border-[#2b2b2b]`} // Add right border classes here
+        className={`fixed top-10 left-0 h-full w-16 bg-[#181818] text-white flex flex-col items-center py-4 shadow-lg z-40 border-r border-gray-600`}
       >
-        <div className="mb-8">
-          <span className="text-sm font-bold">VSCode</span>
-        </div>
-
         {/* Navigation Icons */}
         <nav className="flex flex-col space-y-6">
           <button
