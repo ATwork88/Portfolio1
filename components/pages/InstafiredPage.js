@@ -35,7 +35,7 @@ export default function InstafiredPage() {
               there’s one thing better than friendship, it’s relentless,
               automated mockery!
             </p>
-            <h3 className="text-2xl mt-4">Technologies Used</h3>
+            <h3 className="text-2xl mt-4">Built With</h3>
             <div class="flex space-x-2 mt-4">
               <img
                 src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
@@ -46,8 +46,8 @@ export default function InstafiredPage() {
                 alt="Google Cloud Badge"
               />
               <img
-                src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
-                alt="Instagram Badge"
+                src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"
+                alt="Git Badge"
               />
               <img
                 src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"

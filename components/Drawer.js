@@ -1,4 +1,5 @@
-import { FiHome, FiUser, FiFolder } from "react-icons/fi";
+import { FiHome, FiUser } from "react-icons/fi";
+import { FaCode } from "react-icons/fa6";
 
 export default function Drawer({
   handleOpenSecondary,
@@ -40,7 +41,7 @@ export default function Drawer({
             onClick={() => handleIconClick(3)}
             className="p-2 rounded-md hover:bg-[#333]"
           >
-            <FiFolder size={24} />
+            <FaCode size={24} />
           </button>
           {/* <button
             onClick={() => handleIconClick(4)}
