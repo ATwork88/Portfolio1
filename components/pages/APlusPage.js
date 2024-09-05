@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiInfo, FiSettings } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { TbPackages } from "react-icons/tb";
 
 export default function APlusPage() {
   const [activeTab, setActiveTab] = useState("details");
@@ -17,12 +18,40 @@ export default function APlusPage() {
         return (
           <div>
             <h3 className="text-2xl">A Plus</h3>
-            <p className="mt-4">Lorem Ipsum</p>
+            <p className="mt-4">
+              A comprehensive and user-friendly web app designed to streamline
+              and enhance the management of cram schools. The app provides
+              robust tools for handling all aspects of school administration,
+              from managing teacher profiles and student enrollments to
+              organizing class schedules and tracking attendance. With features
+              like automated homework and assignment management, you can easily
+              assign tasks, monitor submissions, and provide feedback, all in
+              one place. The integrated billing and payment system simplifies
+              the invoicing process, allowing you to generate invoices and
+              manage payments efficiently. Additionally, the app offers a
+              powerful attendance tracking feature to ensure accurate and
+              up-to-date records of student participation. This all-in-one
+              solution is perfect for cram schools looking to improve
+              operational efficiency, communication, and the overall learning
+              experience.
+            </p>
 
             <h3 className="text-2xl mt-4">Inspiration</h3>
-            <p className="mt-4">Lorem Ipsum</p>
+            <p className="mt-4">
+              This web app was born out of necessity—and my absolute hatred for
+              Excel! My dad runs a cram school and has been doing everything the
+              old-school way with pen and paper. Picture this: he spends half
+              his day buried in stacks of paper, painstakingly tracking each
+              student's attendance and manually calculating invoices. When he
+              asked me to create an Excel sheet to help, I knew there had to be
+              a better way (because I'd rather do anything than deal with
+              Excel). So, instead of suffering through spreadsheet hell, I
+              decided to sacrifice my free time to build this web app.
+            </p>
+
             <h3 className="text-2xl mt-4">Built With</h3>
-            <div class="flex space-x-2 mt-4">
+            {/* Updated Flexbox Container for Badges */}
+            <div className="flex flex-wrap gap-2 mt-4">
               <img
                 src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
                 alt="React Badge"
@@ -39,7 +68,6 @@ export default function APlusPage() {
                 src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"
                 alt="Typescript Badge"
               />
-
               <img
                 src="https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white"
                 alt="MUI Badge"
@@ -63,10 +91,26 @@ export default function APlusPage() {
             </div>
           </div>
         );
+      case "features":
+        return (
+          <div>
+            <div className="feature-list">
+              <ul className="list-disc pl-5">
+                <li className="text-white">Teacher Management</li>
+                <li className="text-white">Student Enrollment Management</li>
+                <li className="text-white">Class Scheduling and Management</li>
+                <li className="text-white">
+                  Homework and Assignments Management
+                </li>
+                <li className="text-white">Billing and Payments</li>
+              </ul>
+            </div>
+          </div>
+        );
       case "dependencies":
         return (
           <div>
-            <div class="dependency-list">
+            <div className="dependency-list">
               {/* Instagrapi Dependency */}
               <a
                 href="https://github.com/subzeroid/instagrapi"
@@ -125,23 +169,18 @@ export default function APlusPage() {
         <div className="flex-grow">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-3xl font-semibold">A Plus</h2>
-            <div className="flex items-center space-x-2">
-              <span className="bg-gray-800 text-green-500 px-2 py-1 rounded text-xs">
-                10K installs
-              </span>
-              <span className="text-gray-400 text-sm">
-                Last Updated: 2024-08-30
-              </span>
-            </div>
           </div>
 
           {/* Project Description */}
-          <p className="mb-4">Lorem Ipsum</p>
+          <p className="mb-4">
+            Manage your cram school with ease by automating student records,
+            schedules, and attendance.
+          </p>
 
           {/* Action Buttons */}
           <div className="flex space-x-3">
             <a
-              href="https://github.com/teresalin/insta-fired"
+              href="https://github.com/teresalin/aplus-tj"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white text-sm px-3 py-2 h-6 rounded-sm"
@@ -169,6 +208,17 @@ export default function APlusPage() {
           Details
         </button>
         <button
+          onClick={() => handleTabClick("features")}
+          className={`flex items-center px-4 py-2 ${
+            activeTab === "features"
+              ? "border-b-2 border-blue-500 text-blue-500"
+              : "text-gray-400"
+          }`}
+        >
+          <FiSettings className="mr-2" />
+          Features
+        </button>
+        <button
           onClick={() => handleTabClick("dependencies")}
           className={`flex items-center px-4 py-2 ${
             activeTab === "dependencies"
@@ -176,7 +226,7 @@ export default function APlusPage() {
               : "text-gray-400"
           }`}
         >
-          <FiSettings className="mr-2" />
+          <TbPackages className="mr-2" />
           Dependencies
         </button>
       </div>

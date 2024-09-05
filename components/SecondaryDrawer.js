@@ -14,9 +14,7 @@ export default function SecondaryDrawer({ isOpen, handleSecondarySelection }) {
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
-      {/* Secondary Drawer Content */}
       <div className="p-4">
-        {/* Project Header */}
         <ul className="space-y-2 pl-2">
           <li
             className="flex items-center space-x-2 cursor-pointer"
@@ -30,7 +28,6 @@ export default function SecondaryDrawer({ isOpen, handleSecondarySelection }) {
             <span>Project</span>
           </li>
 
-          {/* Collapsible File List */}
           {isProjectOpen && (
             <ul className="pl-6 space-y-2">
               <li
