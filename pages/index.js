@@ -15,7 +15,10 @@ export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0); // Initialize with 0 to avoid SSR issues
 
   const handleOpenSecondaryDrawer = () => {
-    setIsSecondaryOpen(true);
+    if (window.innerWidth >= 768) {
+      // Only open the secondary drawer if the window width is 768px or larger
+      setIsSecondaryOpen(true);
+    }
   };
 
   const handleCloseSecondaryDrawer = () => {
@@ -49,11 +52,9 @@ export default function Home() {
     return <HomePage />;
   };
 
-  // Handle window resize to hide or show the secondary drawer only on the "Projects" tab
   useEffect(() => {
     // Only run this code on the client side
     if (typeof window !== "undefined") {
-      // Set initial window width
       setWindowWidth(window.innerWidth);
 
       const handleResize = () => {
@@ -68,10 +69,8 @@ export default function Home() {
         }
       };
 
-      // Add the resize event listener
       window.addEventListener("resize", handleResize);
 
-      // Cleanup the event listener on component unmount
       return () => {
         window.removeEventListener("resize", handleResize);
       };

@@ -18,11 +18,6 @@ export default function TopNavbar() {
 
       {/* Spacer */}
       <div className="flex-1"></div>
-
-      {/* Right Side Content (optional) */}
-      <div className="flex items-center space-x-4">
-        <span className="text-xs">User Info</span>
-      </div>
     </div>
   );
 }

@@ -111,25 +111,6 @@ export default function APlusPage() {
         return (
           <div>
             <div className="dependency-list">
-              {/* Instagrapi Dependency */}
-              <a
-                href="https://github.com/subzeroid/instagrapi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <div className="flex items-center p-3 rounded-lg mb-2 hover:bg-gray-700 cursor-pointer">
-                  {/* GitHub Icon */}
-                  <FaGithub className="text-white w-8 h-8 mr-3" />
-                  {/* Dependency Details */}
-                  <div className="flex flex-col">
-                    <span className="text-white font-semibold">Instagrapi</span>
-                    <span className="text-gray-400 text-xs">
-                      subzeroid/instagrapi
-                    </span>
-                  </div>
-                </div>
-              </a>
               {/* Google Cloud Dependency */}
               <a
                 href="https://cloud.google.com/"
