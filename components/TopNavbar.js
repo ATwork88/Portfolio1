@@ -2,7 +2,7 @@ export default function TopNavbar() {
   return (
     <div className="fixed top-0 left-0 right-0 h-10 bg-[#1E1E1E] text-white flex items-center px-4 shadow-sm z-50">
       {/* Logo or Title */}
-      <div className="text-sm font-semibold">Teresa Lin</div>
+      <div className="text-sm font-semibold whitespace-nowrap">Teresa Lin</div>
 
       {/* Menu Options */}
       <div className="flex space-x-6 ml-6 text-xs">

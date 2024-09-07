@@ -93,7 +93,7 @@ export default function Home() {
         />
       )}
       <main
-        className={`flex-grow p-8 pt-16 transition-all duration-300 ${
+        className={`flex-grow pt-10 transition-all duration-300 ${
           selectedPrimary === 3 && isSecondaryOpen ? "ml-80" : "ml-16"
         }`}
       >

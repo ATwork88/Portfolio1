@@ -17,7 +17,7 @@ export default function Drawer({
 
   return (
     <div className="flex">
-      <div className="fixed top-10 left-0 h-full w-16 bg-[#181818] text-white flex flex-col items-center py-4 shadow-lg z-40 border-r border-gray-600">
+      <div className="fixed top-10 left-0 h-full w-16 bg-[#181818] text-white flex flex-col items-center py-4 shadow-lg z-40 border-r border-[#2b2a2a]">
         <nav className="flex flex-col space-y-6">
           <button
             onClick={() => handleIconClick(1)}

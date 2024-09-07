@@ -1,8 +1,10 @@
+import VSCodeTab from "../VSCodeTab";
+
 export default function UserProfile() {
   return (
-    <div>
-      <h1 className="text-4xl font-bold text-white">User Profile</h1>
-      <p className="mt-4 text-white">Under construction.</p>
-    </div>
+    <VSCodeTab tabNames={["About Me"]}>
+      <h1 className="text-2xl font-semibold">About Me</h1>
+      <p>Under construction.</p>
+    </VSCodeTab>
   );
 }
