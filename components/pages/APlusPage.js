@@ -139,7 +139,7 @@ export default function APlusPage() {
   };
 
   return (
-    <div className="text-white p-4">
+    <div className="text-white p-8">
       <div className="flex items-start mb-4">
         {/* Project Icon */}
         <div className="flex-shrink-0 mr-4">
