@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import VSCodeTab from "../VSCodeTab";
-import MonacoEditor from "@monaco-editor/react"; // Correct import
-import * as Babel from "@babel/standalone"; // Import Babel for client-side transpilation
+import MonacoEditor from "@monaco-editor/react";
+import * as Babel from "@babel/standalone";
 
 export default function UserProfile() {
   const [code, setCode] = useState(`
