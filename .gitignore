@@ -31,3 +31,5 @@ yarn-error.log*
 
 # db
 /.db_data/
+# TypeScript
+*.tsbuildinfo
