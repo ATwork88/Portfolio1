@@ -1,7 +1,4 @@
-import {
-  FileText,
-  MessageCircle,
-} from "lucide-react";
+import { Github, Linkedin, MessageCircle } from "lucide-react";
 
 const navigation = [
   { label: "About Me", href: "#about" },
@@ -14,15 +11,12 @@ const links = [
   {
     label: "GitHub",
     href: "https://github.com/teresalin",
+    icon: Github,
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com",
-  },
-  {
-    label: "Resume",
-    href: "#",
-    icon: FileText,
+    href: "https://www.linkedin.com/in/lunglin",
+    icon: Linkedin,
   },
 ];
 
@@ -56,10 +50,10 @@ export function Sidebar() {
               <a
                 key={link.label}
                 href={link.href}
-                target={link.href.startsWith("http") ? "_blank" : undefined}
-                rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                target="_blank"
+                rel="noreferrer"
               >
-                {Icon && <Icon size={16} strokeWidth={1.8} />}
+                <Icon size={16} strokeWidth={1.8} />
                 {link.label}
               </a>
             );
