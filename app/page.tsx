@@ -1,5 +1,6 @@
 import { Sidebar } from "@/components/layout/sidebar";
 import { AboutSection } from "@/components/portfolio/about-section";
+import { ChatSection } from "@/components/portfolio/chat-section";
 import { ProjectsSection } from "@/components/portfolio/projects-section";
 import { WorkHistorySection } from "@/components/portfolio/work-history-section";
 
@@ -27,17 +28,7 @@ export default function Home() {
         <ProjectsSection />
         <WorkHistorySection />
 
-        <section id="chat" className="section chat-placeholder">
-          <p className="section-eyebrow">Ask Claude</p>
-          <h2>Have a question?</h2>
-          <p>
-            Ask about my experience, projects, technical background, or the
-            kinds of problems I enjoy solving.
-          </p>
-          <div className="chat-placeholder-box">
-            Claude chat coming next.
-          </div>
-        </section>
+        <ChatSection />
 
         <footer className="site-footer">
           <p>© 2026 Teresa Lin</p>
