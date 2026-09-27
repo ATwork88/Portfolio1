@@ -1,4 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { portfolioContext } from "@/lib/portfolio-context";
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -18,14 +19,8 @@ export async function POST(request: Request) {
     const response = await anthropic.messages.create({
       model: process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5",
       max_tokens: 500,
-      system:
-        "You are Teresa Lin's portfolio assistant. Answer questions about Teresa's professional background, software engineering experience, projects, skills, and career interests. Be accurate and concise. If you don't have enough information to answer, say so rather than inventing details.",
-      messages: [
-        {
-          role: "user",
-          content: message,
-        },
-      ],
+      system: portfolioContext,
+      messages: [{ role: "user", content: message }],
     });
 
     const text = response.content
