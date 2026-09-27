@@ -3,17 +3,14 @@ export const about = {
   title: "Software Engineer",
   location: "Orange County, California",
   summary:
-    "I’m a software engineer who enjoys building thoughtful products and solving complex technical problems.",
+    "I build full-stack software for complex, real-world problems, with experience spanning healthcare technology, clinical research, enterprise applications, and automation.",
   bio: [
-    "Placeholder paragraph about Teresa’s background and engineering experience.",
-    "Placeholder paragraph about her interests, technical approach, and the kinds of problems she enjoys solving.",
+    "I’m a software engineer with experience designing and building web applications, backend services, data integrations, and cloud infrastructure. At Curavit, I work on software that supports decentralized clinical trials, including patient recruitment, eConsent, remote data capture, healthcare-data integrations, and reporting.",
+    "I enjoy problems that require more than wiring together familiar pieces. I like understanding how a system actually works, pushing technology beyond its obvious use cases, and finding practical solutions when the straightforward approach is not enough.",
+    "My background also includes enterprise software delivery and automation at KPMG and CollabraLink, where I worked across requirements, architecture, development, testing, deployment, and client delivery.",
   ],
   skills: [
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "PostgreSQL",
-    "AWS",
+    "TypeScript","React","Next.js","Node.js","Python","C# / .NET","PostgreSQL",
+    "SQL","AWS","Azure","Google Cloud","Terraform","CI/CD","REST APIs","FHIR","OAuth2",
   ],
 };
