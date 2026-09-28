@@ -16,6 +16,7 @@ export const projects = [
       "SendGrid",
       "Tailwind CSS",
       "Google Cloud",
+      "REST APIs",
     ],
     links: [
       {
@@ -24,6 +25,7 @@ export const projects = [
       },
     ],
   },
+
   {
     title: "Teacher Joanne",
     category: "Personal",
@@ -40,6 +42,7 @@ export const projects = [
       "NextAuth.js",
       "Zod",
       "Docker",
+      "Role-Based Access Control",
     ],
     links: [
       {
@@ -48,6 +51,7 @@ export const projects = [
       },
     ],
   },
+
   {
     title: "Clinical Trial Management Platform",
     category: "Professional",
@@ -66,6 +70,7 @@ export const projects = [
       "Terraform",
     ],
   },
+
   {
     title: "Healthcare Data Integrations",
     category: "Professional",
@@ -73,20 +78,29 @@ export const projects = [
       "Built healthcare-data integration workflows using third-party APIs and FHIR. One trial used 1upHealth for both participant data collection and storage; another used Flexpa for collection and stored processed data in a Google Cloud FHIR store.",
     technologies: [
       "FHIR",
-      "BigQuery",
       "OAuth2",
       "Healthcare APIs",
-      "Google Cloud",
+      "1upHealth",
+      "Flexpa",
+      "Google Cloud FHIR Store",
       "Data Ingestion",
+      "Healthcare Interoperability",
     ],
   },
+
   {
     title: "Wearable Data & Remote Capture",
     category: "Professional",
     description:
       "Clinical research work involving Wearable Smart Ring data and remote data capture for a decentralized trial application.",
-    technologies: ["Wearable Smart Ring", "Remote Data Capture", "Healthcare"],
+    technologies: [
+      "Wearable Smart Ring",
+      "Remote Data Capture",
+      "Clinical Research",
+      "Digital Health",
+    ],
   },
+
   {
     title: "Intelligent Document Analysis",
     category: "Professional",
@@ -99,9 +113,10 @@ export const projects = [
       ".NET",
       "IBM Cloud",
       "Machine Learning",
-      "Document Analysis",
+      "Document Processing",
     ],
   },
+
   {
     title: "Survey & Feedback Analytics",
     category: "Professional",
@@ -115,28 +130,48 @@ export const projects = [
       "Azure Cosmos DB",
       "Azure Service Bus",
       "Azure Functions",
+      "Semantic Analysis",
     ],
   },
+
   {
     title: "Enterprise Financial Workflow",
     category: "Professional",
     description:
       "Worked on an enterprise application for managing and monitoring financial transaction flows as part of KPMG's client delivery work.",
-    technologies: ["SQL", "Selenium", "APIs", "Enterprise Applications"],
+    technologies: [
+      "SQL",
+      "Selenium",
+      "APIs",
+      "Test Automation",
+    ],
   },
+
   {
     title: "Resource Order Management",
     category: "Professional",
     description:
       "Worked on an enterprise resource-management application supporting allocation of resources associated with service orders.",
-    technologies: ["SQL", "Selenium", "APIs", "Enterprise Applications"],
+    technologies: [
+      "SQL",
+      "Selenium",
+      "APIs",
+      "Test Automation",
+    ],
   },
+
   {
     title: "Apartment Search & Roommate Match",
     category: "Academic",
     description:
       "Built a database-backed RESTful web service for apartment and roommate searching, using Java, JPA, and MySQL.",
-    technologies: ["Java", "JPA", "MySQL", "REST"],
+    technologies: [
+      "Java",
+      "JPA",
+      "MySQL",
+      "REST APIs",
+      "Database Design",
+    ],
     links: [
       {
         label: "GitHub",
@@ -144,12 +179,17 @@ export const projects = [
       },
     ],
   },
+
   {
     title: "GIS System",
     category: "Academic",
     description:
       "Designed data structures for organizing, storing, importing, and retrieving information with an emphasis on efficient data access.",
-    technologies: ["Java", "Data Structures", "Data Storage"],
+    technologies: [
+      "Java",
+      "Data Structures",
+      "Algorithm Design",
+    ],
     links: [
       {
         label: "GitHub",
