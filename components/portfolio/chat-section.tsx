@@ -1,14 +1,15 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+// import { FormEvent, useState } from "react";
 
-const suggestedQuestions = [
-  "What kind of software engineer is Teresa?",
-  "Tell me about Teresa's healthcare experience.",
-  "What technologies does Teresa work with?",
-];
+// const suggestedQuestions = [
+//   "What kind of software engineer is Teresa?",
+//   "Tell me about Teresa's healthcare experience.",
+//   "What technologies does Teresa work with?",
+// ];
 
 export function ChatSection() {
+  /*
   const [message, setMessage] = useState("");
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
@@ -54,6 +55,7 @@ export function ChatSection() {
   function askQuestion(question: string) {
     setMessage(question);
   }
+  */
 
   return (
     <section id="chat" className="section chat-section">
@@ -62,8 +64,8 @@ export function ChatSection() {
       <h2>Curious about my work?</h2>
 
       <p className="section-lead">
-        Ask about my experience, projects, technical background, or the kinds
-        of problems I enjoy solving.
+        Ask about my experience, projects, technical background, or the kinds of
+        problems I enjoy solving.
       </p>
 
       <div className="chat-panel">
@@ -71,17 +73,18 @@ export function ChatSection() {
           <div>
             <p className="chat-label">Portfolio assistant</p>
             <p className="chat-description">
-              Ask a question and I&apos;ll point you toward the relevant parts
-              of my background.
+              AI-powered questions about my background and experience.
             </p>
           </div>
 
-          <span className="chat-status">
-            <span className="chat-status-dot" />
-            Available
-          </span>
+          <span className="chat-status">Coming Soon</span>
         </div>
 
+        <div className="chat-coming-soon">
+          <p>Ask Teresa is coming soon.</p>
+        </div>
+
+        {/*
         <div className="chat-suggestions">
           {suggestedQuestions.map((question) => (
             <button
@@ -120,6 +123,7 @@ export function ChatSection() {
             <p>{response}</p>
           </div>
         )}
+        */}
       </div>
     </section>
   );

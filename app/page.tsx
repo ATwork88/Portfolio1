@@ -18,9 +18,8 @@ export default function Home() {
             solves real problems.
           </h1>
           <p className="hero-description">
-            Software engineer focused on building reliable, thoughtful
-            products across web applications, healthcare technology, and
-            developer tools.
+            Software engineer focused on building reliable, thoughtful products
+            across web applications, healthcare technology, and developer tools.
           </p>
         </header>
 

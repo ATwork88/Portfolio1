@@ -17,16 +17,17 @@ export function ProjectsSection() {
             <div>
               <div className="project-meta">
                 <span className="project-category">{project.category}</span>
-                {project.href && (
+                {project.links?.map((link) => (
                   <a
-                    className="project-link"
-                    href={project.href}
+                    key={link.href}
+                    href={link.href}
                     target="_blank"
                     rel="noreferrer"
+                    className="project-link"
                   >
-                    GitHub ↗
+                    {link.label} ↗
                   </a>
-                )}
+                ))}
               </div>
 
               <h3>{project.title}</h3>

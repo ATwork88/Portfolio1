@@ -1,22 +1,20 @@
-import { Github, Linkedin, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const navigation = [
   { label: "About Me", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Work History", href: "#work" },
-  { label: "Ask Claude", href: "#chat" },
+  { label: "Ask Teresa", href: "#chat" },
 ];
 
 const links = [
   {
     label: "GitHub",
     href: "https://github.com/teresalin",
-    icon: Github,
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/lunglin",
-    icon: Linkedin,
   },
 ];
 
@@ -43,21 +41,16 @@ export function Sidebar() {
         <div className="sidebar-divider" />
 
         <nav className="sidebar-nav" aria-label="External links">
-          {links.map((link) => {
-            const Icon = link.icon;
-
-            return (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Icon size={16} strokeWidth={1.8} />
-                {link.label}
-              </a>
-            );
-          })}
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
 
         <div className="sidebar-footer">
