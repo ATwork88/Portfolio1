@@ -2,7 +2,7 @@ import { AboutSection } from "@/components/portfolio/about-section";
 
 export default function Home() {
   return (
-    <div className="home">
+    <>
       <header className="hero">
         <p className="hero-kicker">Hello, I&apos;m Ajay.</p>
         <h1>
@@ -17,6 +17,6 @@ export default function Home() {
       </header>
 
       <AboutSection />
-    </div>
+    </>
   );
 }
