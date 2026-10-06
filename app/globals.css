@@ -198,6 +198,7 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
+  padding-left: 10px;
   margin-top: auto;
   color: var(--muted);
   font-size: 11px;
@@ -762,6 +763,10 @@ a {
     padding: 36px 14px;
   }
 
+  html[data-sidebar="collapsed"] .sidebar-top {
+    justify-content: center;
+  }
+
   html[data-sidebar="collapsed"] .sidebar-toggle {
     display: none;
   }
@@ -793,6 +798,7 @@ a {
 
   html[data-sidebar="collapsed"] .sidebar-footer {
     justify-content: center;
+    padding-left: 0;
   }
 }
 
