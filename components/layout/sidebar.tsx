@@ -1,10 +1,14 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MessageCircle } from "lucide-react";
 
 const navigation = [
-  { label: "About Me", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Work History", href: "#work" },
-  { label: "Ask Ajay", href: "#chat" },
+  { label: "About Me", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Work History", href: "/work" },
+  { label: "Ask Ajay", href: "/chat" },
 ];
 
 const links = [
@@ -19,22 +23,29 @@ const links = [
 ];
 
 export function Sidebar() {
+  const pathname = usePathname();
+
   return (
     <aside className="sidebar">
       <div className="sidebar-inner">
-        <a href="#top" className="identity">
+        <Link href="/" className="identity">
           <div className="identity-mark">AT</div>
           <div>
             <div className="identity-name">Ajay Thakur</div>
             <div className="identity-role">Full Stack AI Developer</div>
           </div>
-        </a>
+        </Link>
 
         <nav className="sidebar-nav" aria-label="Main navigation">
           {navigation.map((item) => (
-            <a key={item.href} href={item.href}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className={pathname === item.href ? "active" : undefined}
+              aria-current={pathname === item.href ? "page" : undefined}
+            >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
