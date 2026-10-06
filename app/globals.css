@@ -215,6 +215,8 @@ a {
 }
 
 .main-content {
+  font-size: 18px;
+  line-height: 1.7;
   transition: margin-left 200ms ease;
   margin-left: var(--sidebar-width);
   padding: 0 72px;
@@ -238,7 +240,7 @@ a {
 .section-eyebrow {
   margin: 0 0 14px;
   color: var(--accent);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -246,7 +248,7 @@ a {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(42px, 6vw, 68px);
+  font-size: clamp(46px, 6.5vw, 74px);
   font-weight: 650;
   letter-spacing: -0.045em;
   line-height: 1.04;
@@ -256,7 +258,7 @@ a {
   max-width: 610px;
   margin: 28px 0 0;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.7;
 }
 
@@ -273,14 +275,14 @@ a {
 
 .section h2 {
   margin: 0;
-  font-size: 34px;
+  font-size: 37px;
   letter-spacing: -0.03em;
 }
 
 .section-lead {
   max-width: 650px;
   margin: 28px 0 0;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.65;
 }
 
@@ -312,7 +314,7 @@ a {
   background: var(--surface);
   padding: 5px 10px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .project-list {
@@ -350,7 +352,7 @@ a {
 
 .project-category {
   color: var(--accent);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -358,7 +360,7 @@ a {
 
 .project-link {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .project-link:hover {
@@ -368,7 +370,7 @@ a {
 .project-card h3,
 .experience-item h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .project-card p,
@@ -403,12 +405,12 @@ a {
 
 .experience-period {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .company {
   color: var(--accent) !important;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .site-footer {
@@ -423,14 +425,14 @@ a {
 
 .chat-label {
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 650;
 }
 
 .chat-description {
   margin: 2px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .chatbot {
@@ -460,7 +462,7 @@ a {
   background: transparent;
   color: var(--muted);
   font: inherit;
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -517,7 +519,7 @@ a {
   border: 1px solid var(--border);
   border-radius: 14px 14px 14px 4px;
   background: var(--surface);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
   white-space: pre-line;
 }
@@ -572,7 +574,7 @@ a {
 .chatbot-questions-label {
   margin: 0 0 10px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -591,7 +593,7 @@ a {
   background: var(--surface);
   color: var(--text);
   font: inherit;
-  font-size: 13px;
+  font-size: 14px;
   cursor: pointer;
   transition:
     border-color 150ms ease,
@@ -650,7 +652,7 @@ a {
   }
 
   .hero h1 {
-    font-size: 44px;
+    font-size: 48px;
   }
 
   .section {
@@ -671,7 +673,7 @@ a {
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.04em;
   vertical-align: middle;
@@ -679,7 +681,7 @@ a {
 
 .skills-heading {
   margin: 56px 0 16px;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .skill-grid {
@@ -717,7 +719,7 @@ a {
 .skill-card-title {
   margin: 0;
   color: var(--text);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: none;
@@ -726,7 +728,7 @@ a {
 .skill-card-count {
   margin-left: auto;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -745,7 +747,7 @@ a {
   border-radius: 999px;
   background: var(--background);
   color: var(--text);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -831,7 +833,7 @@ a {
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -843,7 +845,7 @@ a {
 
 .saas-heading {
   margin: 56px 0 14px;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .saas-list,
@@ -851,7 +853,7 @@ a {
   margin: 0 0 18px;
   padding-left: 22px;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
 }
 
@@ -863,7 +865,7 @@ a {
 .saas-example {
   margin: 16px 0 0;
   color: var(--accent);
-  font-size: 14px;
+  font-size: 15px;
   font-style: italic;
 }
 
@@ -915,4 +917,9 @@ a {
   .theme-toggle {
     margin-top: 16px;
   }
+}
+
+.section-copy strong {
+  color: var(--text);
+  font-weight: 700;
 }

@@ -9,6 +9,15 @@ import {
 import type { ReactNode } from "react";
 import { about } from "@/content/about";
 
+const highlighted = ["ZeroRetain AI"];
+
+function renderBold(text: string) {
+  const pattern = new RegExp(`(${highlighted.join("|")})`);
+  return text.split(pattern).map((part, index) =>
+    highlighted.includes(part) ? <strong key={index}>{part}</strong> : part,
+  );
+}
+
 const categoryIcons: Record<string, ReactNode> = {
   Frontend: <Monitor size={18} />,
   "Backend & APIs": <Server size={18} />,
@@ -28,7 +37,7 @@ export function AboutSection() {
 
       <div className="section-copy">
         {about.bio.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+          <p key={paragraph}>{renderBold(paragraph)}</p>
         ))}
       </div>
 
