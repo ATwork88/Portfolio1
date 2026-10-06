@@ -50,7 +50,6 @@ export function AboutSection() {
                 {categoryIcons[group.label]}
               </span>
               <p className="skill-card-title">{group.label}</p>
-              <span className="skill-card-count">{group.skills.length}</span>
             </div>
             <ul>
               {group.skills.map((skill) => (
