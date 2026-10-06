@@ -211,12 +211,13 @@ a {
 
 .main-content > * {
   max-width: 776px;
+  margin-inline: auto;
 }
 
 .hero {
   display: flex;
   min-height: 82vh;
-  max-width: 720px;
+  max-width: 776px;
   flex-direction: column;
   justify-content: center;
   padding: 80px 0;
@@ -898,24 +899,4 @@ a {
   .theme-toggle {
     margin-top: 16px;
   }
-}
-
-.home {
-  margin-inline: auto;
-  text-align: center;
-}
-
-.home .hero {
-  align-items: center;
-  max-width: none;
-}
-
-.home .hero-description,
-.home .section-lead,
-.home .section-copy {
-  margin-inline: auto;
-}
-
-.home .skill-card {
-  text-align: left;
 }
