@@ -36,6 +36,8 @@ a {
 }
 
 .sidebar {
+  overflow: hidden;
+  transition: width 200ms ease;
   position: fixed;
   inset: 0 auto 0 0;
   width: var(--sidebar-width);
@@ -48,6 +50,35 @@ a {
   height: 100%;
   flex-direction: column;
   padding: 36px 28px;
+}
+
+.sidebar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sidebar-toggle {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.nav-icon {
+  flex-shrink: 0;
 }
 
 .identity {
@@ -121,6 +152,7 @@ a {
 }
 
 .main-content {
+  transition: margin-left 200ms ease;
   max-width: 920px;
   margin-left: var(--sidebar-width);
   padding: 0 72px;
@@ -611,4 +643,40 @@ a {
 
 .education-heading {
   margin-top: 96px;
+}
+
+@media (min-width: 801px) {
+  html[data-sidebar="collapsed"] {
+    --sidebar-width: 76px;
+  }
+
+  html[data-sidebar="collapsed"] .sidebar-inner {
+    padding: 36px 14px;
+  }
+
+  html[data-sidebar="collapsed"] .sidebar-top {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  html[data-sidebar="collapsed"] .identity-text,
+  html[data-sidebar="collapsed"] .nav-label,
+  html[data-sidebar="collapsed"] .sidebar-footer span {
+    display: none;
+  }
+
+  html[data-sidebar="collapsed"] .sidebar-nav a {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  html[data-sidebar="collapsed"] .sidebar-footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .sidebar-toggle {
+    display: none;
+  }
 }
