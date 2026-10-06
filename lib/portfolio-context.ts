@@ -18,7 +18,7 @@ export const portfolioContext = [
   "PROJECTS:",
   JSON.stringify(projects, null, 2),
   "",
-  "SAAS PRODUCT IDEA (concept stage, not yet launched):",
+  "SAAS PRODUCT (currently in development, not yet launched):",
   JSON.stringify(saas, null, 2),
   "",
   "WORK EXPERIENCE:",

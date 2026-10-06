@@ -77,7 +77,6 @@ export const about = {
         "React Native",
         "Expo",
         "iOS & Android",
-        "Biometric auth",
         "Push notifications",
         "App Store & Play Store deployment"
       ]
@@ -138,8 +137,7 @@ export const about = {
         "PayPal",
         "Nango",
         "HubSpot",
-        "Salesforce",
-        "GoHighLevel"
+        "Salesforce"
       ]
     }
   ],
