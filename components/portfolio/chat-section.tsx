@@ -1,129 +1,136 @@
 "use client";
 
-// import { FormEvent, useState } from "react";
+import { Bot, RotateCcw, User } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { chatFaq, chatGreeting } from "@/content/chat";
 
-// const suggestedQuestions = [
-//   "What kind of developer is Ajay?",
-//   "Tell me about Ajay's AI project experience.",
-//   "What technologies does Ajay work with?",
-// ];
+type Message = {
+  id: number;
+  role: "user" | "assistant";
+  text: string;
+};
+
+const greeting: Message = { id: 0, role: "assistant", text: chatGreeting };
 
 export function ChatSection() {
-  /*
-  const [message, setMessage] = useState("");
-  const [response, setResponse] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([greeting]);
+  const [typing, setTyping] = useState(false);
+  const nextId = useRef(1);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const bottom = useRef<HTMLDivElement>(null);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    if (!message.trim() || loading) {
-      return;
+  useEffect(() => {
+    if (messages.length > 1 || typing) {
+      bottom.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
+  }, [messages, typing]);
 
-    setLoading(true);
-    setResponse("");
+  useEffect(() => () => {
+    if (timer.current) clearTimeout(timer.current);
+  }, []);
 
-    try {
-      const result = await fetch("/api/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: message.trim(),
-        }),
-      });
+  const asked = new Set(
+    messages.filter((m) => m.role === "user").map((m) => m.text),
+  );
 
-      const data = await result.json();
+  function ask(question: string, answer: string) {
+    if (typing) return;
 
-      if (!result.ok) {
-        throw new Error(data.error || "Something went wrong.");
-      }
+    setMessages((current) => [
+      ...current,
+      { id: nextId.current++, role: "user", text: question },
+    ]);
+    setTyping(true);
 
-      setResponse(data.message);
-    } catch (error) {
-      console.error(error);
-      setResponse(
-        "Sorry, I couldn't answer that right now. Please try again later.",
-      );
-    } finally {
-      setLoading(false);
-    }
+    timer.current = setTimeout(() => {
+      setMessages((current) => [
+        ...current,
+        { id: nextId.current++, role: "assistant", text: answer },
+      ]);
+      setTyping(false);
+    }, 600);
   }
 
-  function askQuestion(question: string) {
-    setMessage(question);
+  function reset() {
+    if (timer.current) clearTimeout(timer.current);
+    setTyping(false);
+    setMessages([greeting]);
   }
-  */
 
   return (
     <section id="chat" className="section chat-section">
       <p className="section-eyebrow">Ask Ajay</p>
-
       <h2>Curious about my work?</h2>
-
       <p className="section-lead">
-        Ask about my experience, projects, technical background, or the kinds of
-        problems I enjoy solving.
+        Pick a question to learn about my experience, projects, and technical
+        background.
       </p>
 
-      <div className="chat-panel">
-        <div className="chat-panel-header">
+      <div className="chatbot">
+        <div className="chatbot-header">
           <div>
             <p className="chat-label">Portfolio assistant</p>
             <p className="chat-description">
-              AI-powered questions about my background and experience.
+              Answers come from Ajay&apos;s profile and work history.
             </p>
           </div>
 
-          <span className="chat-status">Coming Soon</span>
-        </div>
-
-        <div className="chat-coming-soon">
-          <p>Ask Ajay is coming soon.</p>
-        </div>
-
-        {/*
-        <div className="chat-suggestions">
-          {suggestedQuestions.map((question) => (
-            <button
-              key={question}
-              type="button"
-              className="chat-suggestion"
-              onClick={() => askQuestion(question)}
-            >
-              {question}
-            </button>
-          ))}
-        </div>
-
-        <form className="chat-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={message}
-            onChange={(event) => setMessage(event.target.value)}
-            placeholder="Ask a question..."
-            disabled={loading}
-            aria-label="Ask a question about Ajay"
-          />
-
           <button
-            type="submit"
-            className="chat-submit"
-            disabled={loading || !message.trim()}
+            type="button"
+            className="chatbot-reset"
+            onClick={reset}
+            disabled={messages.length === 1}
           >
-            {loading ? "Thinking..." : "Ask"}
+            <RotateCcw size={14} aria-hidden="true" />
+            Clear chat
           </button>
-        </form>
+        </div>
 
-        {response && (
-          <div className="chat-response">
-            <p className="chat-response-label">Response</p>
-            <p>{response}</p>
+        <div className="chatbot-messages" role="log" aria-live="polite">
+          {messages.map((message) => (
+            <div key={message.id} className={`chat-row ${message.role}`}>
+              <span className="chat-avatar" aria-hidden="true">
+                {message.role === "assistant" ? (
+                  <Bot size={16} />
+                ) : (
+                  <User size={16} />
+                )}
+              </span>
+              <div className="chat-bubble">{message.text}</div>
+            </div>
+          ))}
+
+          {typing && (
+            <div className="chat-row assistant">
+              <span className="chat-avatar" aria-hidden="true">
+                <Bot size={16} />
+              </span>
+              <div className="chat-bubble chat-typing" aria-label="Typing">
+                <span />
+                <span />
+                <span />
+              </div>
+            </div>
+          )}
+          <div ref={bottom} />
+        </div>
+
+        <div className="chatbot-questions">
+          <p className="chatbot-questions-label">Ask a question</p>
+          <div className="chat-suggestions">
+            {chatFaq.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                className={`chat-suggestion${asked.has(item.question) ? " asked" : ""}`}
+                onClick={() => ask(item.question, item.answer)}
+                disabled={typing}
+              >
+                {item.question}
+              </button>
+            ))}
           </div>
-        )}
-        */}
+        </div>
       </div>
     </section>
   );
