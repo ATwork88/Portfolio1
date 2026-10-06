@@ -1,6 +1,7 @@
 export const projects = [
   {
     "title": "nango.dev",
+    "badge": "W23",
     "category": "Developer Tools / SaaS",
     "description": "Built the full public-facing website for Nango, an open-source OAuth and integrations platform used by thousands of developers. Chose Astro for static-generation performance and zero-JS-by-default output, paired with Sanity.io as a headless CMS so the team can update docs, changelogs, and landing pages without developer involvement. Delivered a structured content architecture, custom Sanity schemas, and a developer-focused design system.",
     "technologies": [

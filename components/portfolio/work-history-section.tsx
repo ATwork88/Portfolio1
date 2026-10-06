@@ -1,3 +1,4 @@
+import { about } from "@/content/about";
 import { experience } from "@/content/experience";
 
 export function WorkHistorySection() {
@@ -29,6 +30,20 @@ export function WorkHistorySection() {
             </div>
           </article>
         ))}
+      </div>
+
+      <h2 className="education-heading">Education</h2>
+
+      <div className="experience-list">
+        <article className="experience-item">
+          <div className="experience-period">Education</div>
+
+          <div>
+            <h3>{about.education.field}</h3>
+            <p className="company">{about.education.school}</p>
+            <p>{about.education.level}</p>
+          </div>
+        </article>
       </div>
     </section>
   );
