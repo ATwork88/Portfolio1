@@ -558,13 +558,6 @@ a {
   vertical-align: middle;
 }
 
-.education {
-  margin-top: 40px;
-  padding-left: 16px;
-  border-left: 2px solid var(--border);
-}
-
-.education-label,
 .skill-card-title {
   margin: 0 0 6px;
   color: var(--muted);
@@ -572,18 +565,6 @@ a {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.education-school {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 650;
-}
-
-.education-detail {
-  margin: 2px 0 0;
-  color: var(--muted);
-  font-size: 16px;
 }
 
 .skills-heading {
@@ -626,4 +607,8 @@ a {
   .skill-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.education-heading {
+  margin-top: 96px;
 }

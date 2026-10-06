@@ -14,14 +14,6 @@ export function AboutSection() {
         ))}
       </div>
 
-      <div className="education">
-        <p className="education-label">Education</p>
-        <p className="education-school">{about.education.school}</p>
-        <p className="education-detail">
-          {about.education.field} · {about.education.level}
-        </p>
-      </div>
-
       <p className="section-copy">
         <a href={`mailto:${about.email}`}>{about.email}</a>
       </p>
