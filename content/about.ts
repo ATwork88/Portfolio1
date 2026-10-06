@@ -77,7 +77,6 @@ export const about = {
         "React Native",
         "Expo",
         "iOS & Android",
-        "Biometric auth",
         "Push notifications",
         "App Store & Play Store deployment"
       ]
@@ -97,7 +96,6 @@ export const about = {
       "skills": [
         "OpenAI API",
         "Anthropic Claude",
-        "airrived.ai",
         "AI Agents",
         "Multi-agent orchestration",
         "RAG pipelines",
@@ -108,7 +106,6 @@ export const about = {
         "Claude Code",
         "GitHub Copilot",
         "MediaPipe",
-        "Computer vision",
         "Anthropic API",
         "Claude Vision",
         "LLM extraction",
@@ -135,11 +132,9 @@ export const about = {
         "Git",
         "CI/CD",
         "Stripe",
-        "PayPal",
         "Nango",
         "HubSpot",
-        "Salesforce",
-        "GoHighLevel"
+        "Salesforce"
       ]
     }
   ],

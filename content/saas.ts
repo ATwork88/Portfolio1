@@ -1,7 +1,7 @@
 export const saas = {
   name: "ZeroRetain AI",
   tagline: "Ask anything. Store nothing.",
-  status: "Concept stage · MVP planning",
+  status: "In development · Building the MVP",
   category: "Privacy-First Document Intelligence",
   summary:
     "A privacy-first document intelligence platform that lets organizations ask natural-language questions across their internal documents, emails, and knowledge systems without storing, indexing, or retaining any customer data. Documents are retrieved, analyzed, answered, and immediately discarded.",
@@ -68,8 +68,8 @@ export const saas = {
     "Claude / OpenAI / Azure OpenAI",
   ],
   roadmap: [
-    "Start with the Microsoft 365 Privacy Assistant: the largest market and the easiest API access.",
-    "Validate with 3–5 pilot customers on willingness to pay and compliance acceptance.",
-    "Expand into legal, healthcare, finance, and insurance.",
+    "Building the Microsoft 365 Privacy Assistant first: the largest market and the easiest API access.",
+    "Next: pilot with 3–5 customers to confirm willingness to pay and compliance acceptance.",
+    "Then expand into legal, healthcare, finance, and insurance.",
   ],
 };

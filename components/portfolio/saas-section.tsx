@@ -63,7 +63,7 @@ export function SaasSection() {
         ))}
       </div>
 
-      <h3 className="saas-heading">Planned stack</h3>
+      <h3 className="saas-heading">Tech stack</h3>
       <div className="technology-list">
         {saas.stack.map((item) => (
           <span key={item} className="technology">
@@ -72,7 +72,7 @@ export function SaasSection() {
         ))}
       </div>
 
-      <h3 className="saas-heading">Roadmap</h3>
+      <h3 className="saas-heading">What I'm building</h3>
       <ol className="saas-steps">
         {saas.roadmap.map((item) => (
           <li key={item}>{item}</li>

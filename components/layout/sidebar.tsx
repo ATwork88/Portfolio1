@@ -8,9 +8,11 @@ import {
   FolderKanban,
   Mail,
   MessageCircle,
+  Moon,
   PanelLeftClose,
   PanelLeftOpen,
   Rocket,
+  Sun,
   User,
 } from "lucide-react";
 import type { ReactNode } from "react";
@@ -79,12 +81,47 @@ const links: { label: string; href: string; icon: ReactNode }[] = [
 export function Sidebar() {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     try {
       setCollapsed(localStorage.getItem(STORAGE_KEY) === "1");
     } catch {}
   }, []);
+
+  useEffect(() => {
+    setTheme(
+      document.documentElement.dataset.theme === "dark" ? "dark" : "light",
+    );
+  }, []);
+
+  useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== "[" || event.metaKey || event.ctrlKey || event.altKey) {
+        return;
+      }
+      const target = event.target as HTMLElement | null;
+      if (
+        target &&
+        (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName))
+      ) {
+        return;
+      }
+      setCollapsed((value) => !value);
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  function toggleTheme() {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem("theme", next);
+    } catch {}
+  }
 
   useEffect(() => {
     document.documentElement.dataset.sidebar = collapsed
@@ -103,7 +140,6 @@ export function Sidebar() {
             <div className="identity-mark">AT</div>
             <div className="identity-text">
               <div className="identity-name">Ajay Thakur</div>
-              <div className="identity-role">Full Stack AI Developer</div>
             </div>
           </Link>
 
@@ -113,9 +149,12 @@ export function Sidebar() {
             onClick={() => setCollapsed((value) => !value)}
             aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
             aria-expanded={!collapsed}
-            title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+            aria-keyshortcuts="["
           >
             {collapsed ? <PanelLeftOpen size={18} /> : <PanelLeftClose size={18} />}
+            <span className="sidebar-tooltip" role="tooltip">
+              Toggle sidebar <kbd>[</kbd>
+            </span>
           </button>
         </div>
 
@@ -154,9 +193,30 @@ export function Sidebar() {
           ))}
         </nav>
 
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={
+            theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+          }
+          title={theme === "dark" ? "Light mode" : "Dark mode"}
+        >
+          {theme === "dark" ? (
+            <Sun {...iconProps} />
+          ) : (
+            <Moon {...iconProps} />
+          )}
+          <span className="nav-label">
+            {theme === "dark" ? "Light mode" : "Dark mode"}
+          </span>
+        </button>
+
         <div className="sidebar-footer">
-          <MessageCircle size={15} />
-          <span>AI-powered portfolio</span>
+          <span className="footer-full">© 2026 Ajay Thakur</span>
+          <span className="footer-short" aria-hidden="true">
+            ©
+          </span>
         </div>
       </div>
     </aside>
