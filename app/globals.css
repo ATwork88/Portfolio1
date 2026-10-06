@@ -140,6 +140,7 @@ a {
 }
 
 .identity-mark {
+  position: relative;
   display: grid;
   width: 38px;
   height: 38px;
@@ -204,9 +205,12 @@ a {
 
 .main-content {
   transition: margin-left 200ms ease;
-  max-width: 920px;
   margin-left: var(--sidebar-width);
   padding: 0 72px;
+}
+
+.main-content > * {
+  max-width: 776px;
 }
 
 .hero {
@@ -757,9 +761,18 @@ a {
     padding: 36px 14px;
   }
 
-  html[data-sidebar="collapsed"] .sidebar-top {
-    flex-direction: column;
-    gap: 14px;
+  html[data-sidebar="collapsed"] .sidebar-toggle {
+    display: none;
+  }
+
+  html[data-sidebar="collapsed"] .identity:hover .identity-initials,
+  html[data-sidebar="collapsed"] .identity:focus-visible .identity-initials {
+    display: none;
+  }
+
+  html[data-sidebar="collapsed"] .identity:hover .identity-expand,
+  html[data-sidebar="collapsed"] .identity:focus-visible .identity-expand {
+    display: block;
   }
 
   html[data-sidebar="collapsed"] .identity-text,
@@ -837,6 +850,15 @@ a {
   font-style: italic;
 }
 
+.identity-expand {
+  display: none;
+}
+
+.identity:hover .sidebar-tooltip,
+.identity:focus-visible .sidebar-tooltip {
+  opacity: 1;
+}
+
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -876,4 +898,24 @@ a {
   .theme-toggle {
     margin-top: 16px;
   }
+}
+
+.home {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.home .hero {
+  align-items: center;
+  max-width: none;
+}
+
+.home .hero-description,
+.home .section-lead,
+.home .section-copy {
+  margin-inline: auto;
+}
+
+.home .skill-card {
+  text-align: left;
 }

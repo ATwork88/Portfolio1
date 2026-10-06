@@ -7,7 +7,7 @@ export const about = {
   "bio": [
     "I'm a full stack AI developer with 8+ years of experience across frontend, backend, and cloud. I run an independent practice focused on AI-powered product development, full-stack web engineering, and systems integration for startups and growth-stage companies.",
     "I work with a small number of clients at a time, typically as the sole technical lead or embedded alongside an existing team. Recent engagements span manufacturing AI platforms, financial document automation, healthcare integrations, and corporate intelligence systems.",
-    "I also build and launch my own products, including withConflux, a self-funded content-AI API gateway."
+    "I'm also building my own product, ZeroRetain AI, a privacy-first document intelligence platform."
   ],
   "stats": [
     {
