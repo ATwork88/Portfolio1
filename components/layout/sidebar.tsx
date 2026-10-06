@@ -4,17 +4,17 @@ const navigation = [
   { label: "About Me", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Work History", href: "#work" },
-  { label: "Ask Teresa", href: "#chat" },
+  { label: "Ask Ajay", href: "#chat" },
 ];
 
 const links = [
   {
     label: "GitHub",
-    href: "https://github.com/teresalin",
+    href: "https://github.com/ATwork88",
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/lunglin",
+    href: "https://www.linkedin.com/in/ajay-thakur-7998bb360/",
   },
 ];
 
@@ -23,10 +23,10 @@ export function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar-inner">
         <a href="#top" className="identity">
-          <div className="identity-mark">TL</div>
+          <div className="identity-mark">AT</div>
           <div>
-            <div className="identity-name">Teresa Lin</div>
-            <div className="identity-role">Software Engineer</div>
+            <div className="identity-name">Ajay Thakur</div>
+            <div className="identity-role">Full Stack AI Developer</div>
           </div>
         </a>
 

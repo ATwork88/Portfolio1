@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Teresa Lin — Software Engineer",
-  description: "Personal portfolio of Teresa Lin.",
+  title: "Ajay Thakur — Full Stack AI Developer",
+  description: "Personal portfolio of Ajay Thakur.",
 };
 
 export default function RootLayout({

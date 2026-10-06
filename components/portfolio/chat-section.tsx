@@ -3,9 +3,9 @@
 // import { FormEvent, useState } from "react";
 
 // const suggestedQuestions = [
-//   "What kind of software engineer is Teresa?",
-//   "Tell me about Teresa's healthcare experience.",
-//   "What technologies does Teresa work with?",
+//   "What kind of developer is Ajay?",
+//   "Tell me about Ajay's AI project experience.",
+//   "What technologies does Ajay work with?",
 // ];
 
 export function ChatSection() {
@@ -59,7 +59,7 @@ export function ChatSection() {
 
   return (
     <section id="chat" className="section chat-section">
-      <p className="section-eyebrow">Ask Teresa</p>
+      <p className="section-eyebrow">Ask Ajay</p>
 
       <h2>Curious about my work?</h2>
 
@@ -81,7 +81,7 @@ export function ChatSection() {
         </div>
 
         <div className="chat-coming-soon">
-          <p>Ask Teresa is coming soon.</p>
+          <p>Ask Ajay is coming soon.</p>
         </div>
 
         {/*
@@ -105,7 +105,7 @@ export function ChatSection() {
             onChange={(event) => setMessage(event.target.value)}
             placeholder="Ask a question..."
             disabled={loading}
-            aria-label="Ask a question about Teresa"
+            aria-label="Ask a question about Ajay"
           />
 
           <button

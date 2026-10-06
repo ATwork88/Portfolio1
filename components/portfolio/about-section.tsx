@@ -14,6 +14,12 @@ export function AboutSection() {
         ))}
       </div>
 
+      <p className="section-copy">
+        {about.education.degree}, {about.education.school}
+        <br />
+        <a href={`mailto:${about.email}`}>{about.email}</a>
+      </p>
+
       <div className="skills">
         {about.skills.map((skill) => (
           <span key={skill} className="skill">
