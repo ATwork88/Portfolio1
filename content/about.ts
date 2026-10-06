@@ -1,30 +1,216 @@
 export const about = {
-  name: "Teresa Lin",
-  title: "Software Engineer",
-  location: "Orange County, California",
-  summary:
-    "I build full-stack software for complex, real-world problems, with experience spanning healthcare technology, clinical research, enterprise applications, and automation.",
-  bio: [
-    "I’m a software engineer with experience designing and building web applications, backend services, data integrations, and cloud infrastructure. At Curavit, I work on software that supports decentralized clinical trials, including patient recruitment, eConsent, remote data capture, healthcare-data integrations, and reporting.",
-    "I enjoy problems that require more than wiring together familiar pieces. I like understanding how a system actually works, pushing technology beyond its obvious use cases, and finding practical solutions when the straightforward approach is not enough.",
-    "My background also includes enterprise software delivery and automation at KPMG and CollabraLink, where I worked across requirements, architecture, development, testing, deployment, and client delivery.",
+  "name": "Ajay Thakur",
+  "title": "Full Stack AI Developer",
+  "location": "Philadelphia, PA",
+  "email": "contact.ajaythakur.dev@gmail.com",
+  "summary": "I design and build AI-powered products, scalable SaaS platforms, and high-performance web applications — end to end. From architecture to deployment, I take full ownership and ship products that hold up in production.",
+  "bio": [
+    "I'm a full stack AI developer with 8+ years of experience across frontend, backend, and cloud. I run an independent practice focused on AI-powered product development, full-stack web engineering, and systems integration for startups and growth-stage companies.",
+    "I work with a small number of clients at a time, typically as the sole technical lead or embedded alongside an existing team. Recent engagements span manufacturing AI platforms, financial document automation, healthcare integrations, and corporate intelligence systems.",
+    "I also build and launch my own products, including withConflux, a self-funded content-AI API gateway."
   ],
-  skills: [
-    "TypeScript",
+  "stats": [
+    {
+      "value": "8+ years",
+      "label": "Full stack development"
+    },
+    {
+      "value": "10+ projects",
+      "label": "AI & LLM systems"
+    },
+    {
+      "value": "3 products",
+      "label": "Self-funded SaaS"
+    },
+    {
+      "value": "Full ownership",
+      "label": "Frontend through cloud"
+    }
+  ],
+  "skillGroups": [
+    {
+      "label": "Frontend",
+      "skills": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Vue.js",
+        "Angular",
+        "Svelte / SvelteKit",
+        "Astro",
+        "Tailwind CSS",
+        "SASS",
+        "Bootstrap",
+        "Redux",
+        "React Query",
+        "Three.js",
+        "WebGL",
+        "GSAP"
+      ]
+    },
+    {
+      "label": "Backend & APIs",
+      "skills": [
+        "Python (Django, FastAPI, Flask)",
+        "Node.js (Express, NestJS)",
+        "C# / .NET",
+        "Laravel",
+        "PHP",
+        "REST APIs",
+        "GraphQL",
+        "AppSync",
+        "OAuth 2.0",
+        "JWT",
+        "Webhooks",
+        "Celery",
+        "Redis",
+        "WebSockets"
+      ]
+    },
+    {
+      "label": "Mobile",
+      "skills": [
+        "React Native",
+        "Expo",
+        "iOS & Android",
+        "Biometric auth",
+        "Push notifications",
+        "App Store & Play Store deployment"
+      ]
+    },
+    {
+      "label": "CMS & Site Builders",
+      "skills": [
+        "WordPress",
+        "Webflow",
+        "Sanity.io",
+        "Laravel Nova",
+        "Headless CMS"
+      ]
+    },
+    {
+      "label": "AI & LLMs",
+      "skills": [
+        "OpenAI API",
+        "Anthropic Claude",
+        "airrived.ai",
+        "AI Agents",
+        "Multi-agent orchestration",
+        "RAG pipelines",
+        "Vector search (Qdrant)",
+        "vLLM",
+        "Hugging Face",
+        "Prompt engineering",
+        "Claude Code",
+        "GitHub Copilot",
+        "MediaPipe",
+        "Computer vision"
+      ]
+    },
+    {
+      "label": "Infrastructure & Data",
+      "skills": [
+        "PostgreSQL",
+        "Supabase",
+        "MySQL",
+        "MongoDB",
+        "PostGIS",
+        "AWS (Lambda, ECS Fargate, Bedrock, RDS, S3, Textract, CloudFront, API Gateway)",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "Vercel",
+        "Azure App Service",
+        "Git",
+        "CI/CD",
+        "Stripe",
+        "PayPal",
+        "Nango",
+        "HubSpot",
+        "Salesforce",
+        "GoHighLevel"
+      ]
+    }
+  ],
+  "education": {
+    "degree": "Bachelor of Computer Science (BCompSc)",
+    "school": "North Carolina State University"
+  },
+  "skills": [
     "React",
     "Next.js",
-    "Node.js",
-    "Python",
+    "TypeScript",
+    "JavaScript",
+    "Vue.js",
+    "Angular",
+    "Svelte / SvelteKit",
+    "Astro",
+    "Tailwind CSS",
+    "SASS",
+    "Bootstrap",
+    "Redux",
+    "React Query",
+    "Three.js",
+    "WebGL",
+    "GSAP",
+    "Python (Django, FastAPI, Flask)",
+    "Node.js (Express, NestJS)",
     "C# / .NET",
-    "PostgreSQL",
-    "SQL",
-    "AWS",
-    "Azure",
-    "Google Cloud",
-    "Terraform",
-    "CI/CD",
+    "Laravel",
+    "PHP",
     "REST APIs",
-    "FHIR",
-    "OAuth2",
-  ],
+    "GraphQL",
+    "AppSync",
+    "OAuth 2.0",
+    "JWT",
+    "Webhooks",
+    "Celery",
+    "Redis",
+    "WebSockets",
+    "React Native",
+    "Expo",
+    "iOS & Android",
+    "Biometric auth",
+    "Push notifications",
+    "App Store & Play Store deployment",
+    "WordPress",
+    "Webflow",
+    "Sanity.io",
+    "Laravel Nova",
+    "Headless CMS",
+    "OpenAI API",
+    "Anthropic Claude",
+    "airrived.ai",
+    "AI Agents",
+    "Multi-agent orchestration",
+    "RAG pipelines",
+    "Vector search (Qdrant)",
+    "vLLM",
+    "Hugging Face",
+    "Prompt engineering",
+    "Claude Code",
+    "GitHub Copilot",
+    "MediaPipe",
+    "Computer vision",
+    "PostgreSQL",
+    "Supabase",
+    "MySQL",
+    "MongoDB",
+    "PostGIS",
+    "AWS (Lambda, ECS Fargate, Bedrock, RDS, S3, Textract, CloudFront, API Gateway)",
+    "Docker",
+    "Kubernetes",
+    "Terraform",
+    "Vercel",
+    "Azure App Service",
+    "Git",
+    "CI/CD",
+    "Stripe",
+    "PayPal",
+    "Nango",
+    "HubSpot",
+    "Salesforce",
+    "GoHighLevel"
+  ]
 };

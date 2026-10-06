@@ -6,9 +6,9 @@ export function ProjectsSection() {
       <p className="section-eyebrow">Selected Work</p>
       <h2>Projects</h2>
       <p className="section-copy">
-        A mix of professional, academic, and personal work. Professional
-        projects are described at a level appropriate for a public portfolio,
-        without exposing confidential client or internal details.
+        AI systems, SaaS platforms, and web applications built for clients and as
+        self-funded products. Client work is described without confidential
+        details.
       </p>
 
       <div className="project-list">

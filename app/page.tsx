@@ -11,15 +11,15 @@ export default function Home() {
 
       <main className="main-content">
         <header className="hero">
-          <p className="hero-kicker">Hello, I&apos;m Teresa.</p>
+          <p className="hero-kicker">Hello, I&apos;m Ajay.</p>
           <h1>
-            I build software that
+            I build AI products
             <br />
-            solves real problems.
+            that ship.
           </h1>
           <p className="hero-description">
-            Software engineer focused on building reliable, thoughtful products
-            across web applications, healthcare technology, and developer tools.
+            Full stack AI developer building AI-powered products, scalable SaaS
+            platforms, and high-performance web applications, end to end.
           </p>
         </header>
 
@@ -30,7 +30,7 @@ export default function Home() {
         <ChatSection />
 
         <footer className="site-footer">
-          <p>© 2026 Teresa Lin</p>
+          <p>© 2026 Ajay Thakur</p>
         </footer>
       </main>
     </div>
