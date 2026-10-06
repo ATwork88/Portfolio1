@@ -20,11 +20,18 @@ export function AboutSection() {
         <a href={`mailto:${about.email}`}>{about.email}</a>
       </p>
 
-      <div className="skills">
-        {about.skills.map((skill) => (
-          <span key={skill} className="skill">
-            {skill}
-          </span>
+      <div className="skill-groups">
+        {about.skillGroups.map((group) => (
+          <div key={group.label} className="skill-group">
+            <p className="skill-group-label">{group.label}</p>
+            <div className="skills">
+              {group.skills.map((skill) => (
+                <span key={skill} className="skill">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </section>

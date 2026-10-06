@@ -30,7 +30,12 @@ export function ProjectsSection() {
                 ))}
               </div>
 
-              <h3>{project.title}</h3>
+              <h3>
+                {project.title}
+                {"badge" in project && project.badge ? (
+                  <span className="project-badge">{project.badge}</span>
+                ) : null}
+              </h3>
               <p>{project.description}</p>
             </div>
 
