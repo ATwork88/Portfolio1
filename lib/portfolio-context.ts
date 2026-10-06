@@ -1,6 +1,7 @@
 import { about } from "@/content/about";
 import { projects } from "@/content/projects";
 import { experience } from "@/content/experience";
+import { saas } from "@/content/saas";
 
 export const portfolioContext = [
   "You are Ajay Thakur's portfolio assistant.",
@@ -16,6 +17,9 @@ export const portfolioContext = [
   "",
   "PROJECTS:",
   JSON.stringify(projects, null, 2),
+  "",
+  "SAAS PRODUCT IDEA (concept stage, not yet launched):",
+  JSON.stringify(saas, null, 2),
   "",
   "WORK EXPERIENCE:",
   JSON.stringify(experience, null, 2),

@@ -1,5 +1,23 @@
 export const projects = [
   {
+    "title": "Self-Hosted Time Tracking, Expense & Invoicing System",
+    "category": "Business Operations / Internal Tools",
+    "description": "Designed, built and deployed a self-hosted replacement for Harvest and other subscription tools, giving a client full ownership of its time tracking, expense, project and invoicing data with no vendor lock-in. Features a fast weekly time-entry grid, expense tracking with private receipt uploads, client and project management with per-project rates, and hourly or monetary budgets with real-time burn-down. Invoices are generated from approved, unbilled time and expenses with tax support and locking to prevent duplicate billing, rendered as branded PDFs, and emailed to clients with delivery status tracking. Three role tiers (Administrator, Manager, Team Member) are enforced server-side, and reporting dashboards cover budget usage, profitability and time analysis, with CSV export and full PostgreSQL portability. Delivered as a Dockerized system on a VPS with Nginx and Let's Encrypt SSL.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Hook Form",
+      "Zod",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma",
+      "Docker",
+      "Nginx"
+    ]
+  },
+  {
     "title": "nango.dev",
     "badge": "W23",
     "category": "Developer Tools / SaaS",

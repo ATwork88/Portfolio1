@@ -1,4 +1,22 @@
+import {
+  Cloud,
+  LayoutTemplate,
+  Monitor,
+  Server,
+  Smartphone,
+  Sparkles,
+} from "lucide-react";
+import type { ReactNode } from "react";
 import { about } from "@/content/about";
+
+const categoryIcons: Record<string, ReactNode> = {
+  Frontend: <Monitor size={18} />,
+  "Backend & APIs": <Server size={18} />,
+  Mobile: <Smartphone size={18} />,
+  "CMS & Site Builders": <LayoutTemplate size={18} />,
+  "AI & LLMs": <Sparkles size={18} />,
+  "Infrastructure & Data": <Cloud size={18} />,
+};
 
 export function AboutSection() {
   return (
@@ -18,7 +36,13 @@ export function AboutSection() {
       <div className="skill-grid">
         {about.skillGroups.map((group) => (
           <div key={group.label} className="skill-card">
-            <p className="skill-card-title">{group.label}</p>
+            <div className="skill-card-header">
+              <span className="skill-card-icon">
+                {categoryIcons[group.label]}
+              </span>
+              <p className="skill-card-title">{group.label}</p>
+              <span className="skill-card-count">{group.skills.length}</span>
+            </div>
             <ul>
               {group.skills.map((skill) => (
                 <li key={skill}>{skill}</li>
