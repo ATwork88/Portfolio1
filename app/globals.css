@@ -204,9 +204,12 @@ a {
 
 .main-content {
   transition: margin-left 200ms ease;
-  max-width: 920px;
   margin-left: var(--sidebar-width);
   padding: 0 72px;
+}
+
+.main-content > * {
+  max-width: 776px;
 }
 
 .hero {
@@ -876,4 +879,24 @@ a {
   .theme-toggle {
     margin-top: 16px;
   }
+}
+
+.home {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.home .hero {
+  align-items: center;
+  max-width: none;
+}
+
+.home .hero-description,
+.home .section-lead,
+.home .section-copy {
+  margin-inline: auto;
+}
+
+.home .skill-card {
+  text-align: left;
 }
