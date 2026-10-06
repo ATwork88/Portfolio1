@@ -8,9 +8,11 @@ import {
   FolderKanban,
   Mail,
   MessageCircle,
+  Moon,
   PanelLeftClose,
   PanelLeftOpen,
   Rocket,
+  Sun,
   User,
 } from "lucide-react";
 import type { ReactNode } from "react";
@@ -79,12 +81,28 @@ const links: { label: string; href: string; icon: ReactNode }[] = [
 export function Sidebar() {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     try {
       setCollapsed(localStorage.getItem(STORAGE_KEY) === "1");
     } catch {}
   }, []);
+
+  useEffect(() => {
+    setTheme(
+      document.documentElement.dataset.theme === "dark" ? "dark" : "light",
+    );
+  }, []);
+
+  function toggleTheme() {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem("theme", next);
+    } catch {}
+  }
 
   useEffect(() => {
     document.documentElement.dataset.sidebar = collapsed
@@ -103,7 +121,6 @@ export function Sidebar() {
             <div className="identity-mark">AT</div>
             <div className="identity-text">
               <div className="identity-name">Ajay Thakur</div>
-              <div className="identity-role">Full Stack AI Developer</div>
             </div>
           </Link>
 
@@ -153,6 +170,25 @@ export function Sidebar() {
             </a>
           ))}
         </nav>
+
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={
+            theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+          }
+          title={theme === "dark" ? "Light mode" : "Dark mode"}
+        >
+          {theme === "dark" ? (
+            <Sun {...iconProps} />
+          ) : (
+            <Moon {...iconProps} />
+          )}
+          <span className="nav-label">
+            {theme === "dark" ? "Light mode" : "Dark mode"}
+          </span>
+        </button>
 
         <div className="sidebar-footer">
           <MessageCircle size={15} />
