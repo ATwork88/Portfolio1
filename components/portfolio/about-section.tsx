@@ -14,10 +14,6 @@ export function AboutSection() {
         ))}
       </div>
 
-      <p className="section-copy">
-        <a href={`mailto:${about.email}`}>{about.email}</a>
-      </p>
-
       <h3 className="skills-heading">Skills</h3>
       <div className="skill-grid">
         {about.skillGroups.map((group) => (

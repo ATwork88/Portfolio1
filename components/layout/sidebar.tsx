@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MessageCircle } from "lucide-react";
+import { about } from "@/content/about";
 
 const navigation = [
   { label: "About Me", href: "/" },
@@ -19,6 +20,10 @@ const links = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/ajay-thakur-7998bb360/",
+  },
+  {
+    label: "Email",
+    href: `mailto:${about.email}`,
   },
 ];
 
@@ -56,8 +61,9 @@ export function Sidebar() {
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
-              rel="noreferrer"
+              {...(link.href.startsWith("mailto:")
+                ? {}
+                : { target: "_blank", rel: "noreferrer" })}
             >
               {link.label}
             </a>
