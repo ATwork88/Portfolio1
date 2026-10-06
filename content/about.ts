@@ -144,7 +144,8 @@ export const about = {
     }
   ],
   "education": {
-    "degree": "Bachelor of Computer Science (BCompSc)",
-    "school": "North Carolina State University"
+    "school": "North Carolina State University",
+    "field": "Computer Science",
+    "level": "Bachelor's degree"
   }
 };

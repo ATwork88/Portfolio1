@@ -14,23 +14,28 @@ export function AboutSection() {
         ))}
       </div>
 
+      <div className="education">
+        <p className="education-label">Education</p>
+        <p className="education-school">{about.education.school}</p>
+        <p className="education-detail">
+          {about.education.field} · {about.education.level}
+        </p>
+      </div>
+
       <p className="section-copy">
-        {about.education.degree}, {about.education.school}
-        <br />
         <a href={`mailto:${about.email}`}>{about.email}</a>
       </p>
 
-      <div className="skill-groups">
+      <h3 className="skills-heading">Skills</h3>
+      <div className="skill-grid">
         {about.skillGroups.map((group) => (
-          <div key={group.label} className="skill-group">
-            <p className="skill-group-label">{group.label}</p>
-            <div className="skills">
+          <div key={group.label} className="skill-card">
+            <p className="skill-card-title">{group.label}</p>
+            <ul>
               {group.skills.map((skill) => (
-                <span key={skill} className="skill">
-                  {skill}
-                </span>
+                <li key={skill}>{skill}</li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>
