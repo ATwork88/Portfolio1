@@ -18,8 +18,8 @@ export const projects = [
     ]
   },
   {
-    "title": "nango.dev",
-    "badge": "W23",
+    "title": "Nango.dev",
+    "badge": "YC W23",
     "category": "Developer Tools / SaaS",
     "description": "Built the full public-facing website for Nango, an open-source OAuth and integrations platform used by thousands of developers. Chose Astro for static-generation performance and zero-JS-by-default output, paired with Sanity.io as a headless CMS so the team can update docs, changelogs, and landing pages without developer involvement. Delivered a structured content architecture, custom Sanity schemas, and a developer-focused design system.",
     "technologies": [
@@ -34,7 +34,7 @@ export const projects = [
     ]
   },
   {
-    "title": "airrived.ai",
+    "title": "Airrived.ai",
     "category": "AI / SaaS",
     "description": "Built the full website for an AI platform that needed to communicate the sophistication of the product at first glance. Next.js foundation, Three.js for real-time 3D WebGL scenes, and GSAP for scroll-triggered animations, while holding 60fps across devices under GPU-intensive rendering.",
     "technologies": [

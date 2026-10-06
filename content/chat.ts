@@ -54,7 +54,7 @@ export const chatFaq = [
     id: "frontend",
     question: "Can Ajay build polished frontends?",
     answer:
-      "Yes. For airrived.ai he built a site with real-time 3D WebGL scenes (Three.js) and scroll-triggered animations (GSAP) at 60fps. For nango.dev, a Y Combinator W23 company, he built the full public website with Astro and Sanity.io so the team can update content without a developer.",
+      "Yes. For Airrived.ai he built a site with real-time 3D WebGL scenes (Three.js) and scroll-triggered animations (GSAP) at 60fps. For Nango.dev, a YC W23 company, he built the full public website with Astro and Sanity.io so the team can update content without a developer.",
   },
   {
     id: "withconflux",
