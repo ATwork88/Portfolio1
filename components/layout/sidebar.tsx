@@ -191,8 +191,10 @@ export function Sidebar() {
         </button>
 
         <div className="sidebar-footer">
-          <MessageCircle size={15} />
-          <span>AI-powered portfolio</span>
+          <span className="footer-full">© 2026 Ajay Thakur</span>
+          <span className="footer-short" aria-hidden="true">
+            ©
+          </span>
         </div>
       </div>
     </aside>

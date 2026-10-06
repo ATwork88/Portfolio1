@@ -154,6 +154,10 @@ a {
   background: var(--border);
 }
 
+.footer-short {
+  display: none;
+}
+
 .sidebar-footer {
   display: flex;
   align-items: center;
@@ -706,6 +710,10 @@ a {
 }
 
 @media (min-width: 801px) {
+  .site-footer {
+    display: none;
+  }
+
   html[data-sidebar="collapsed"] {
     --sidebar-width: 76px;
   }
@@ -721,8 +729,12 @@ a {
 
   html[data-sidebar="collapsed"] .identity-text,
   html[data-sidebar="collapsed"] .nav-label,
-  html[data-sidebar="collapsed"] .sidebar-footer span {
+  html[data-sidebar="collapsed"] .footer-full {
     display: none;
+  }
+
+  html[data-sidebar="collapsed"] .footer-short {
+    display: inline;
   }
 
   html[data-sidebar="collapsed"] .sidebar-nav a {
