@@ -140,6 +140,7 @@ a {
 }
 
 .identity-mark {
+  position: relative;
   display: grid;
   width: 38px;
   height: 38px;
@@ -760,9 +761,18 @@ a {
     padding: 36px 14px;
   }
 
-  html[data-sidebar="collapsed"] .sidebar-top {
-    flex-direction: column;
-    gap: 14px;
+  html[data-sidebar="collapsed"] .sidebar-toggle {
+    display: none;
+  }
+
+  html[data-sidebar="collapsed"] .identity:hover .identity-initials,
+  html[data-sidebar="collapsed"] .identity:focus-visible .identity-initials {
+    display: none;
+  }
+
+  html[data-sidebar="collapsed"] .identity:hover .identity-expand,
+  html[data-sidebar="collapsed"] .identity:focus-visible .identity-expand {
+    display: block;
   }
 
   html[data-sidebar="collapsed"] .identity-text,
@@ -838,6 +848,15 @@ a {
   color: var(--accent);
   font-size: 14px;
   font-style: italic;
+}
+
+.identity-expand {
+  display: none;
+}
+
+.identity:hover .sidebar-tooltip,
+.identity:focus-visible .sidebar-tooltip {
+  opacity: 1;
 }
 
 .theme-toggle {

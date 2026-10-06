@@ -136,8 +136,31 @@ export function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar-inner">
         <div className="sidebar-top">
-          <Link href="/" className="identity" title="Ajay Thakur">
-            <div className="identity-mark">AT</div>
+          <Link
+            href="/"
+            className="identity"
+            title={collapsed ? undefined : "Ajay Thakur"}
+            aria-label={collapsed ? "Expand sidebar" : undefined}
+            onClick={(event) => {
+              if (collapsed && matchMedia("(min-width: 801px)").matches) {
+                event.preventDefault();
+                setCollapsed(false);
+              }
+            }}
+          >
+            <div className="identity-mark">
+              <span className="identity-initials">AT</span>
+              <PanelLeftOpen
+                size={18}
+                className="identity-expand"
+                aria-hidden="true"
+              />
+              {collapsed && (
+                <span className="sidebar-tooltip" role="tooltip">
+                  Toggle sidebar <kbd>[</kbd>
+                </span>
+              )}
+            </div>
             <div className="identity-text">
               <div className="identity-name">Ajay Thakur</div>
             </div>
