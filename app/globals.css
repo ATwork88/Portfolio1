@@ -708,3 +708,52 @@ a {
     display: none;
   }
 }
+
+.saas-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.saas-status {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.saas-promise {
+  color: var(--text);
+  font-style: italic;
+}
+
+.saas-heading {
+  margin: 56px 0 14px;
+  font-size: 22px;
+}
+
+.saas-list,
+.saas-steps {
+  margin: 0 0 18px;
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.saas-steps li,
+.saas-list li {
+  margin-bottom: 6px;
+}
+
+.saas-example {
+  margin: 16px 0 0;
+  color: var(--accent);
+  font-size: 14px;
+  font-style: italic;
+}

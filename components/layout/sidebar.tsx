@@ -10,6 +10,7 @@ import {
   MessageCircle,
   PanelLeftClose,
   PanelLeftOpen,
+  Rocket,
   User,
 } from "lucide-react";
 import type { ReactNode } from "react";
@@ -53,6 +54,7 @@ const navigation: { label: string; href: string; icon: ReactNode }[] = [
   { label: "About Me", href: "/", icon: <User {...iconProps} /> },
   { label: "Projects", href: "/projects", icon: <FolderKanban {...iconProps} /> },
   { label: "Work History", href: "/work", icon: <Briefcase {...iconProps} /> },
+  { label: "My SaaS", href: "/saas", icon: <Rocket {...iconProps} /> },
   { label: "Ask Ajay", href: "/chat", icon: <MessageCircle {...iconProps} /> },
 ];
 
