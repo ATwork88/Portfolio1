@@ -114,7 +114,28 @@ export function ProjectsSection() {
         {alsoBuilt.map((item) => (
           <li key={item.title}>
             <p className="also-title">{item.title}</p>
-            <p className="also-description">{item.description}</p>
+            {item.description && (
+              <p className="also-description">{item.description}</p>
+            )}
+            {item.sites && (
+              <ul className="also-sites">
+                {item.sites.map((site) => (
+                  <li key={site.name}>
+                    <a
+                      href={site.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="also-site-link"
+                    >
+                      {site.name} ↗
+                    </a>
+                    {site.note && (
+                      <span className="also-site-note"> ({site.note})</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
             {item.stack && (
               <p className="also-stack">Stack: {item.stack.join(", ")}</p>
             )}

@@ -1068,3 +1068,36 @@ a {
   font-size: 14px;
   opacity: 0.85;
 }
+
+.also-list .also-sites {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-top: 8px;
+}
+
+.also-list .also-sites li {
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+}
+
+.also-site-link {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 4px;
+}
+
+.also-site-link:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.also-site-note {
+  color: var(--muted);
+  font-size: 14px;
+}
