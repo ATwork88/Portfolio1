@@ -988,26 +988,6 @@ a {
   font-weight: 500;
 }
 
-.project-skills {
-  margin-top: 20px;
-}
-
-.project-skills summary {
-  display: inline-block;
-  color: var(--muted);
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.project-skills summary:hover {
-  color: var(--text);
-}
-
-.project-skills .technology-list {
-  margin-top: 12px;
-}
-
 .project-tags {
   display: flex;
   flex-wrap: wrap;

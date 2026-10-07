@@ -8,6 +8,23 @@ import {
   type ProjectFilter,
 } from "@/content/projects";
 
+const baseName = (value: string) => value.split(" (")[0].trim().toLowerCase();
+
+// Combine tech stack and skills into one list without duplicates. When both
+// name the same thing, keep the more detailed (parenthesised) version.
+function mergeTags(stack: string[], skills: string[]) {
+  const merged = [...stack];
+  for (const skill of skills) {
+    const index = merged.findIndex((item) => baseName(item) === baseName(skill));
+    if (index === -1) {
+      merged.push(skill);
+    } else if (skill.includes("(") && !merged[index].includes("(")) {
+      merged[index] = skill;
+    }
+  }
+  return merged;
+}
+
 export function ProjectsSection() {
   const [active, setActive] = useState<ProjectFilter | "All">("All");
 
@@ -78,25 +95,14 @@ export function ProjectsSection() {
               <p>{project.result}</p>
             </div>
 
-            <p className="project-label">Tech stack</p>
+            <p className="project-label">Tech stack &amp; skills</p>
             <div className="technology-list">
-              {project.stack.map((item) => (
+              {mergeTags(project.stack, project.skills).map((item) => (
                 <span key={item} className="technology">
                   {item}
                 </span>
               ))}
             </div>
-
-            <details className="project-skills">
-              <summary>Skills</summary>
-              <div className="technology-list">
-                {project.skills.map((item) => (
-                  <span key={item} className="technology">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </details>
 
             <div className="project-tags">
               {project.filters.map((filter) => (
