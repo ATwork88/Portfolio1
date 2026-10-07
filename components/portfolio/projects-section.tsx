@@ -1,54 +1,126 @@
-import { projects } from "@/content/projects";
+"use client";
+
+import { useState } from "react";
+import {
+  alsoBuilt,
+  projectFilters,
+  projects,
+  type ProjectFilter,
+} from "@/content/projects";
 
 export function ProjectsSection() {
+  const [active, setActive] = useState<ProjectFilter | "All">("All");
+
+  const visible =
+    active === "All"
+      ? projects
+      : projects.filter((project) => project.filters.includes(active));
+
+  const countFor = (filter: ProjectFilter) =>
+    projects.filter((project) => project.filters.includes(filter)).length;
+
   return (
     <section id="projects" className="section">
       <p className="section-eyebrow">Selected Work</p>
       <h2>Projects</h2>
       <p className="section-copy">
-        AI systems, SaaS platforms, and web applications built for clients and as
-        self-funded products. Client work is described without confidential
-        details.
+        AI systems, integrations, and full stack products built for clients.
+        Client work is described without confidential details.
       </p>
 
-      <div className="project-list">
-        {projects.map((project) => (
-          <article key={project.title} className="project-card">
-            <div>
-              <div className="project-meta">
-                <span className="project-category">{project.category}</span>
-                {project.links?.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="project-link"
-                  >
-                    {link.label} ↗
-                  </a>
-                ))}
-              </div>
+      <div className="filter-bar" role="group" aria-label="Filter projects">
+        <button
+          type="button"
+          className={`filter-chip${active === "All" ? " active" : ""}`}
+          aria-pressed={active === "All"}
+          onClick={() => setActive("All")}
+        >
+          All <span>{projects.length}</span>
+        </button>
+        {projectFilters.map((filter) => (
+          <button
+            key={filter}
+            type="button"
+            className={`filter-chip${active === filter ? " active" : ""}`}
+            aria-pressed={active === filter}
+            onClick={() => setActive(filter)}
+          >
+            {filter} <span>{countFor(filter)}</span>
+          </button>
+        ))}
+      </div>
 
-              <h3>
-                {project.title}
-                {"badge" in project && project.badge ? (
-                  <span className="project-badge">{project.badge}</span>
-                ) : null}
-              </h3>
-              <p>{project.description}</p>
+      <div className="project-list">
+        {visible.map((project) => (
+          <article key={project.title} className="project-card">
+            <div className="project-meta">
+              <span className="project-category">{project.industry}</span>
+              {project.link && (
+                <a
+                  href={project.link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                >
+                  {project.link.label} ↗
+                </a>
+              )}
             </div>
 
+            <h3>{project.title}</h3>
+            <p className="project-role">{project.role}</p>
+
+            <p className="project-label">What I built</p>
+            <p className="project-built">{project.built}</p>
+
+            <div className="project-result">
+              <p className="project-label">Result</p>
+              <p>{project.result}</p>
+            </div>
+
+            <p className="project-label">Tech stack</p>
             <div className="technology-list">
-              {project.technologies.map((technology) => (
-                <span key={technology} className="technology">
-                  {technology}
+              {project.stack.map((item) => (
+                <span key={item} className="technology">
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            <details className="project-skills">
+              <summary>Skills</summary>
+              <div className="technology-list">
+                {project.skills.map((item) => (
+                  <span key={item} className="technology">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </details>
+
+            <div className="project-tags">
+              {project.filters.map((filter) => (
+                <span key={filter} className="project-tag">
+                  {filter}
                 </span>
               ))}
             </div>
           </article>
         ))}
       </div>
+
+      <h3 className="also-heading">Also built</h3>
+      <ul className="also-list">
+        {alsoBuilt.map((item) => (
+          <li key={item.title}>
+            <p className="also-title">{item.title}</p>
+            <p className="also-description">{item.description}</p>
+            {item.stack && (
+              <p className="also-stack">Stack: {item.stack.join(", ")}</p>
+            )}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
