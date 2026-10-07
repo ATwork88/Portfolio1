@@ -110,38 +110,48 @@ export function ProjectsSection() {
       </div>
 
       <h3 className="also-heading">Also built</h3>
-      <ul className="also-list">
+      <p className="also-intro">Smaller builds, integrations and client sites.</p>
+
+      <div className="also-grid">
         {alsoBuilt.map((item) => (
-          <li key={item.title}>
-            <p className="also-title">{item.title}</p>
-            {item.description && (
-              <p className="also-description">{item.description}</p>
-            )}
-            {item.sites && (
-              <ul className="also-sites">
-                {item.sites.map((site) => (
-                  <li key={site.name}>
-                    <a
-                      href={site.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="also-site-link"
-                    >
-                      {site.name} ↗
-                    </a>
-                    {site.note && (
-                      <span className="also-site-note"> ({site.note})</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            )}
+          <article
+            key={item.title}
+            className={`also-card${item.sites ? " wide" : ""}`}
+          >
+            <h4>{item.title}</h4>
+            {item.description && <p>{item.description}</p>}
+
             {item.stack && (
-              <p className="also-stack">Stack: {item.stack.join(", ")}</p>
+              <div className="technology-list">
+                {item.stack.map((tech) => (
+                  <span key={tech} className="technology">
+                    {tech}
+                  </span>
+                ))}
+              </div>
             )}
-          </li>
+
+            {item.sites && (
+              <div className="also-sites">
+                {item.sites.map((site) => (
+                  <a
+                    key={site.name}
+                    href={site.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="site-pill"
+                  >
+                    <span className="site-pill-name">{site.name} ↗</span>
+                    {site.note && (
+                      <span className="site-pill-note">{site.note}</span>
+                    )}
+                  </a>
+                ))}
+              </div>
+            )}
+          </article>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }

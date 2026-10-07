@@ -1034,70 +1034,96 @@ a {
   font-size: 26px;
 }
 
-.also-list {
+.also-intro {
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+.also-grid {
   display: grid;
-  gap: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.also-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 24px;
+  border: 1px dashed var(--border-strong);
+  border-radius: 12px;
+  background: transparent;
+  transition:
+    border-color 150ms ease,
+    background 150ms ease;
+}
+
+.also-card:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+
+.also-card.wide,
+.also-card:last-child:nth-child(even) {
+  grid-column: 1 / -1;
+}
+
+.also-card h4 {
   margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.also-list li {
-  padding: 18px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.also-list p {
-  margin: 0;
-}
-
-.also-title {
   font-size: 18px;
   font-weight: 650;
 }
 
-.also-description {
-  margin-top: 4px !important;
+.also-card p {
+  margin: 0;
   color: var(--muted);
   font-size: 16px;
+  line-height: 1.6;
 }
 
-.also-stack {
-  margin-top: 6px !important;
-  color: var(--muted);
-  font-size: 14px;
-  opacity: 0.85;
+.also-card .technology-list {
+  margin-top: auto;
+  padding-top: 6px;
 }
 
-.also-list .also-sites {
+.also-sites {
   display: flex;
-  padding: 0;
-  list-style: none;
   flex-wrap: wrap;
-  gap: 8px 22px;
-  margin-top: 8px;
+  gap: 10px;
 }
 
-.also-list .also-sites li {
-  padding: 0;
-  border: 0;
-  font-size: 16px;
+.site-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 150px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  transition:
+    border-color 150ms ease,
+    transform 150ms ease;
 }
 
-.also-site-link {
+.site-pill:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.site-pill-name {
   color: var(--text);
-  font-weight: 600;
-  text-decoration: underline;
-  text-decoration-color: var(--border-strong);
-  text-underline-offset: 4px;
+  font-size: 16px;
+  font-weight: 650;
 }
 
-.also-site-link:hover {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
-}
-
-.also-site-note {
+.site-pill-note {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  .also-grid {
+    grid-template-columns: 1fr;
+  }
 }
