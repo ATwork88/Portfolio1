@@ -309,8 +309,9 @@ export const projects: Project[] = [
 
 export const alsoBuilt: {
   title: string;
-  description: string;
+  description?: string;
   stack?: string[];
+  sites?: { name: string; href: string; note?: string }[];
 }[] = [
   {
     title: "Self-Hosted Time Tracking & Invoicing",
@@ -376,8 +377,21 @@ export const alsoBuilt: {
   },
   {
     title: "Client sites",
-    description:
-      "Nango.dev (YC W23; Astro, Sanity), Airrived.ai (Next.js, Three.js, GSAP), Charles & Colvard (Svelte), CentralSquare and Risewell Homes (headless WordPress), WristCheck, LARQ.",
+    sites: [
+      { name: "Nango.dev", href: "https://nango.dev", note: "YC W23; Astro, Sanity" },
+      {
+        name: "Airrived.ai",
+        href: "https://airrived.ai",
+        note: "Next.js, Three.js, GSAP",
+      },
+      {
+        name: "Charles & Colvard",
+        href: "https://www.charlesandcolvard.com",
+        note: "Svelte",
+      },
+      { name: "WristCheck", href: "https://wristcheck.com" },
+      { name: "LARQ", href: "https://www.livelarq.com" },
+    ],
   },
   {
     title: "withConflux",
