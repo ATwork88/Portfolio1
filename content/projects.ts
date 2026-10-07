@@ -389,16 +389,6 @@ export const alsoBuilt: {
         href: "https://www.charlesandcolvard.com",
         note: "Svelte",
       },
-      {
-        name: "CentralSquare",
-        href: "https://www.centralsquare.com",
-        note: "headless WordPress",
-      },
-      {
-        name: "Risewell Homes",
-        href: "https://risewellhomes.com",
-        note: "headless WordPress",
-      },
       { name: "WristCheck", href: "https://wristcheck.com" },
       { name: "LARQ", href: "https://www.livelarq.com" },
     ],
