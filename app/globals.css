@@ -325,10 +325,8 @@ a {
 
 .project-card {
   display: flex;
-  min-height: 180px;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 24px;
+  padding: 28px;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface);
@@ -665,20 +663,6 @@ a {
   }
 }
 
-.project-badge {
-  display: inline-block;
-  margin-left: 10px;
-  padding: 2px 8px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  vertical-align: middle;
-}
-
 .skills-heading {
   margin: 56px 0 16px;
   font-size: 24px;
@@ -915,4 +899,172 @@ a {
 .section-copy strong {
   color: var(--text);
   font-weight: 700;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    background 150ms ease;
+}
+
+.filter-chip span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.filter-chip:hover {
+  border-color: var(--accent);
+}
+
+.filter-chip.active {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--surface);
+}
+
+.filter-chip.active span {
+  color: var(--surface);
+  opacity: 0.7;
+}
+
+.project-card .project-role {
+  margin-top: 6px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.project-card .project-label {
+  margin: 22px 0 0;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-card .project-built {
+  margin-top: 6px;
+  max-width: none;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.project-result {
+  margin-top: 22px;
+  padding: 14px 18px 16px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--accent-soft);
+}
+
+.project-result .project-label {
+  margin-top: 0;
+}
+
+.project-card .project-result p:last-child {
+  max-width: none;
+  margin-top: 4px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.project-skills {
+  margin-top: 20px;
+}
+
+.project-skills summary {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-skills summary:hover {
+  color: var(--text);
+}
+
+.project-skills .technology-list {
+  margin-top: 12px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.project-tag {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.project-tag::before {
+  content: "# ";
+  color: var(--accent);
+}
+
+.also-heading {
+  margin: 72px 0 8px;
+  font-size: 26px;
+}
+
+.also-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.also-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.also-list p {
+  margin: 0;
+}
+
+.also-title {
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.also-description {
+  margin-top: 4px !important;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.also-stack {
+  margin-top: 6px !important;
+  color: var(--muted);
+  font-size: 14px;
+  opacity: 0.85;
 }

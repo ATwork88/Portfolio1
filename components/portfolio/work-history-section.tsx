@@ -36,12 +36,11 @@ export function WorkHistorySection() {
 
       <div className="experience-list">
         <article className="experience-item">
-          <div className="experience-period">Education</div>
+          <div className="experience-period">{about.education.level}</div>
 
           <div>
             <h3>{about.education.field}</h3>
             <p className="company">{about.education.school}</p>
-            <p>{about.education.level}</p>
           </div>
         </article>
       </div>
