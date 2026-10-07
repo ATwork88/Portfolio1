@@ -362,10 +362,6 @@ export const alsoBuilt: {
     ],
   },
   {
-    title: "Mayo Clinic Appointment Platform",
-    description: "Backend and API integration.",
-  },
-  {
     title: "FundWise AI",
     description:
       "Nonprofit fundraising web app with an OpenAI integration and organization-level data separation.",
@@ -387,10 +383,18 @@ export const alsoBuilt: {
       {
         name: "Charles & Colvard",
         href: "https://www.charlesandcolvard.com",
-        note: "Svelte",
+        note: "Astro, Svelte, PHP",
       },
-      { name: "WristCheck", href: "https://wristcheck.com" },
-      { name: "LARQ", href: "https://www.livelarq.com" },
+      {
+        name: "WristCheck",
+        href: "https://wristcheck.com",
+        note: "Node.js, Next.js, PostgreSQL",
+      },
+      {
+        name: "LARQ",
+        href: "https://www.livelarq.com",
+        note: "Node.js, Next.js",
+      },
     ],
   },
   {
